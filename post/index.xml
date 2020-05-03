@@ -6,7 +6,7 @@
     <description>Recent content in Posts on x64.life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 May 2020 23:35:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 03:25:56 +0800</lastBuildDate>
     
 	<atom:link href="http://x64.life/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,14 @@
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>http://x64.life/posts/my-first-post/</link>
-      <pubDate>Sun, 03 May 2020 23:35:15 +0800</pubDate>
+      <title>First Post</title>
+      <link>http://x64.life/post/first-post/</link>
+      <pubDate>Mon, 04 May 2020 03:25:56 +0800</pubDate>
       
-      <guid>http://x64.life/posts/my-first-post/</guid>
-      <description></description>
+      <guid>http://x64.life/post/first-post/</guid>
+      <description>&lt;p&gt;qwertttyyyuuiiiijhdddssserrf
+fggghhjjjjjjjjjjj
+ttyuuiiiiiiiiffgg&lt;/p&gt;</description>
     </item>
     
     <item>
