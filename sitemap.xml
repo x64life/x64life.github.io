@@ -9,21 +9,21 @@
   </url>
   
   <url>
-    <loc>http://x64.life/about/</loc>
-    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://x64.life/post/first-post/</loc>
+    <loc>http://x64.life/post/</loc>
     <lastmod>2020-05-04T03:25:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://x64.life/post/</loc>
+    <loc>http://x64.life/</loc>
+    <lastmod>2020-05-04T03:25:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://x64.life/post/first-post/</loc>
     <lastmod>2020-05-04T03:25:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -207,13 +207,6 @@
   <url>
     <loc>http://x64.life/post/this-is-a-very-long-title/</loc>
     <lastmod>2017-08-30T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://x64.life/</loc>
-    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
