@@ -323,14 +323,12 @@
 </ol>
 <h4 id="1-hugo安装">1. Hugo安装</h4>
 <p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
-下载并安装Go语言和最新版的Hugo：<br>
-&lsquo;&lsquo;&lsquo;bash
-apt-get install golang
-wget <a href="https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb">https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb</a>
+下载并安装Go语言和最新版的Hugo：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
-'&rsquo;&rsquo;<br>
-如果正确返回版本信息，说明已经安装成功</p>
+</code></pre></div><p>如果正确返回版本信息，说明已经安装成功</p>
 <p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
 <h4 id="2-host-on-github">2. Host on Github</h4>
 <p>官方教程：</p>
@@ -339,16 +337,14 @@ hugo version
 <li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
 <li>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</li>
 <li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
-<li>&lsquo;&lsquo;&lsquo;bash
-rm -rf public
-'&rsquo;&rsquo;
-删除public文件夹</li>
-<li>&lsquo;&lsquo;&lsquo;bash
-git submodule add -b master <a href="https://github.com/">https://github.com/</a>&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
-'&rsquo;&rsquo;
-建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
+<li>删除public文件夹</li>
 </ul>
-<h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf public
+</code></pre></div><ul>
+<li>建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/<span style="color:#ae81ff">\&lt;</span>USERNAME<span style="color:#ae81ff">\&gt;</span>/<span style="color:#ae81ff">\&lt;</span>USERNAME<span style="color:#ae81ff">\&gt;</span>.github.io.git public
+</code></pre></div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
 <p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
 <img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
 <p>未完待续</p>
