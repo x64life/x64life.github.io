@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>第一篇文章 - X64·Life</title>
+  <title>Code-server&#43;Hugo&#43;Github Pasges建立个人博客 - X64·Life</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,12 +23,15 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="桀木" />
-  <meta name="description" content="第一篇文章，说到哪里是哪里吧&amp;hellip;
-我是谁？ 网名：桀木 | 职业：汽车工程师 | 业余爱好：IT技术
-更多信息参见 关于 页面
-为什么写？ 学习 | 记录 | 分享
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧
-下面暂时没有了 未完待续，哈哈哈
+  <meta name="description" content="前言 此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+ 数据存放于群晖DS215j（家庭私有云） Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10  1. Hugo安装 通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+&amp;lsquo;&amp;lsquo;&amp;lsquo;bash apt-get install golang wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb dpkg -i hugo_0.69.2_Linux-64bit.deb hugo version &#39;&amp;rsquo;&amp;rsquo;
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github 官方教程：
+ 在Github中创建一个代码仓库&amp;lt;YOUR-PROJECT&amp;gt;用于存放Hugo的相关文件； 在Github中创建&amp;lt;USERNAME&amp;gt;.github.io代码仓库，用于存放网页文件； git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;YOUR-PROJECT&amp;gt; 将Hugo站点文件复制到本地仓库 &amp;lt;YOUR-PROJECT&amp;gt; &amp;lsquo;&amp;lsquo;&amp;lsquo;bash rm -rf public &#39;&amp;rsquo;&amp;rsquo; 删除public文件夹 &amp;lsquo;&amp;lsquo;&amp;lsquo;bash git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public &#39;&amp;rsquo;&amp;rsquo; 建立submodule，将本地public代码仓库关联到&amp;lt;USERNAME&amp;gt;.github.io  3. Code-server(vscode)作为Markdown编辑器 Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。 未完待续
 " />
 
   <meta name="keywords" content="x64, life, 桀木" />
@@ -41,7 +44,7 @@
 <meta name="generator" content="Hugo 0.69.1" />
 
 
-<link rel="canonical" href="http://x64.life/post/first-post/" />
+<link rel="canonical" href="http://x64.life/post/hugo-github-vscode/" />
 
 
 
@@ -65,47 +68,134 @@
 
 
 
-<meta property="og:title" content="第一篇文章" />
-<meta property="og:description" content="第一篇文章，说到哪里是哪里吧&hellip;
-我是谁？
-网名：桀木 | 职业：汽车工程师 | 业余爱好：IT技术
-更多信息参见 关于 页面
-为什么写？
-学习 | 记录 | 分享
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧
-下面暂时没有了
-未完待续，哈哈哈" />
+<meta property="og:title" content="Code-server&#43;Hugo&#43;Github Pasges建立个人博客" />
+<meta property="og:description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+&lsquo;&lsquo;&lsquo;bash
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+&#39;&rsquo;&rsquo;
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+&lsquo;&lsquo;&lsquo;bash
+rm -rf public
+&#39;&rsquo;&rsquo;
+删除public文件夹
+&lsquo;&lsquo;&lsquo;bash
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+&#39;&rsquo;&rsquo;
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+3. Code-server(vscode)作为Markdown编辑器
+Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+
+未完待续" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://x64.life/post/first-post/" />
-<meta property="article:published_time" content="2020-05-04T03:25:56+08:00" />
-<meta property="article:modified_time" content="2020-05-05T22:48:56+08:00" />
-<meta itemprop="name" content="第一篇文章">
-<meta itemprop="description" content="第一篇文章，说到哪里是哪里吧&hellip;
-我是谁？
-网名：桀木 | 职业：汽车工程师 | 业余爱好：IT技术
-更多信息参见 关于 页面
-为什么写？
-学习 | 记录 | 分享
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧
-下面暂时没有了
-未完待续，哈哈哈">
-<meta itemprop="datePublished" content="2020-05-04T03:25:56&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-05T22:48:56&#43;08:00" />
-<meta itemprop="wordCount" content="123">
+<meta property="og:url" content="http://x64.life/post/hugo-github-vscode/" />
+<meta property="article:published_time" content="2020-05-05T22:50:18+08:00" />
+<meta property="article:modified_time" content="2020-05-05T22:50:18+08:00" />
+<meta itemprop="name" content="Code-server&#43;Hugo&#43;Github Pasges建立个人博客">
+<meta itemprop="description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+&lsquo;&lsquo;&lsquo;bash
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+&#39;&rsquo;&rsquo;
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+&lsquo;&lsquo;&lsquo;bash
+rm -rf public
+&#39;&rsquo;&rsquo;
+删除public文件夹
+&lsquo;&lsquo;&lsquo;bash
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+&#39;&rsquo;&rsquo;
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+3. Code-server(vscode)作为Markdown编辑器
+Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+
+未完待续">
+<meta itemprop="datePublished" content="2020-05-05T22:50:18&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-05T22:50:18&#43;08:00" />
+<meta itemprop="wordCount" content="581">
 
 
 
-<meta itemprop="keywords" content="关于," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="第一篇文章"/>
-<meta name="twitter:description" content="第一篇文章，说到哪里是哪里吧&hellip;
-我是谁？
-网名：桀木 | 职业：汽车工程师 | 业余爱好：IT技术
-更多信息参见 关于 页面
-为什么写？
-学习 | 记录 | 分享
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧
-下面暂时没有了
-未完待续，哈哈哈"/>
+<meta itemprop="keywords" content="hugo,github,vscode," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Code-server&#43;Hugo&#43;Github Pasges建立个人博客"/>
+<meta name="twitter:description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+&lsquo;&lsquo;&lsquo;bash
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+&#39;&rsquo;&rsquo;
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+&lsquo;&lsquo;&lsquo;bash
+rm -rf public
+&#39;&rsquo;&rsquo;
+删除public文件夹
+&lsquo;&lsquo;&lsquo;bash
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+&#39;&rsquo;&rsquo;
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+3. Code-server(vscode)作为Markdown编辑器
+Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+
+未完待续"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -325,14 +415,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">第一篇文章</h1>
+      <h1 class="post-title">Code-server&#43;Hugo&#43;Github Pasges建立个人博客</h1>
       
       <div class="post-meta">
-        <time datetime="2020-05-04" class="post-time">
-          2020-05-04
+        <time datetime="2020-05-05" class="post-time">
+          2020-05-05
         </time>
         <div class="post-category">
-            <a href="http://x64.life/categories/%E7%9E%8E%E6%89%AF/"> 瞎扯 </a>
+            <a href="http://x64.life/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
             
           </div>
         
@@ -350,15 +440,44 @@
 
     
     <div class="post-content">
-      <p>第一篇文章，说到哪里是哪里吧&hellip;</p>
-<h2 id="我是谁">我是谁？</h2>
-<p>网名：桀木 | 职业：汽车工程师 | 业余爱好：IT技术<br>
-更多信息参见 <a href="http://x64.life/about/">关于</a> 页面</p>
-<h2 id="为什么写">为什么写？</h2>
-<p>学习 | 记录 | 分享<br>
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧</p>
-<h2 id="下面暂时没有了">下面暂时没有了</h2>
-<p>未完待续，哈哈哈</p>
+      <h4 id="前言">前言</h4>
+<p>此贴用于记录本站的建立过程。<br>
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：</p>
+<ol>
+<li>数据存放于群晖DS215j（家庭私有云）</li>
+<li>Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10</li>
+</ol>
+<h4 id="1-hugo安装">1. Hugo安装</h4>
+<p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
+下载并安装Go语言和最新版的Hugo：<br>
+&lsquo;&lsquo;&lsquo;bash
+apt-get install golang
+wget <a href="https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb">https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb</a>
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+'&rsquo;&rsquo;<br>
+如果正确返回版本信息，说明已经安装成功</p>
+<p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
+<h4 id="2-host-on-github">2. Host on Github</h4>
+<p>官方教程：</p>
+<ul>
+<li>在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；</li>
+<li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
+<li>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</li>
+<li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
+<li>&lsquo;&lsquo;&lsquo;bash
+rm -rf public
+'&rsquo;&rsquo;
+删除public文件夹</li>
+<li>&lsquo;&lsquo;&lsquo;bash
+git submodule add -b master <a href="https://github.com/">https://github.com/</a>&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+'&rsquo;&rsquo;
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
+</ul>
+<h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
+<p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+<img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
+<p>未完待续</p>
     </div>
 
     
@@ -388,27 +507,29 @@
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="http://x64.life/tags/%E5%85%B3%E4%BA%8E/">关于</a>
+          <a href="http://x64.life/tags/hugo/">hugo</a>
+          <a href="http://x64.life/tags/github/">github</a>
+          <a href="http://x64.life/tags/vscode/">vscode</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/hugo-github-vscode/">
+        
+          <a class="next" href="/post/first-post/">
+            <span class="next-text nav-default">第一篇文章</span>
+            <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">Code-server&#43;Hugo&#43;Github Pasges建立个人博客</span>
-            <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        
       </nav>
     </footer>
   </article>

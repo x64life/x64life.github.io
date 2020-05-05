@@ -294,6 +294,77 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/hugo-github-vscode/">Code-server&#43;Hugo&#43;Github Pasges建立个人博客</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-05" class="post-time">
+        2020-05-05
+      </time>
+      <div class="post-category">
+          <a href="http://x64.life/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <h4 id="前言">前言</h4>
+<p>此贴用于记录本站的建立过程。<br>
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：</p>
+<ol>
+<li>数据存放于群晖DS215j（家庭私有云）</li>
+<li>Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10</li>
+</ol>
+<h4 id="1-hugo安装">1. Hugo安装</h4>
+<p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
+下载并安装Go语言和最新版的Hugo：<br>
+&lsquo;&lsquo;&lsquo;bash
+apt-get install golang
+wget <a href="https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb">https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb</a>
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+'&rsquo;&rsquo;<br>
+如果正确返回版本信息，说明已经安装成功</p>
+<p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
+<h4 id="2-host-on-github">2. Host on Github</h4>
+<p>官方教程：</p>
+<ul>
+<li>在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；</li>
+<li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
+<li>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</li>
+<li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
+<li>&lsquo;&lsquo;&lsquo;bash
+rm -rf public
+'&rsquo;&rsquo;
+删除public文件夹</li>
+<li>&lsquo;&lsquo;&lsquo;bash
+git submodule add -b master <a href="https://github.com/">https://github.com/</a>&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+'&rsquo;&rsquo;
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
+</ul>
+<h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
+<p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+<img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
+<p>未完待续</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/hugo-github-vscode/" class="read-more-link">阅读全文</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/first-post/">第一篇文章</a>
     </h1>
     
