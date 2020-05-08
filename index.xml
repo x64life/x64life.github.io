@@ -51,7 +51,9 @@ hugo version
 &lt;ul&gt;
 &lt;li&gt;在Github中创建一个代码仓库&amp;lt;YOUR-PROJECT&amp;gt;用于存放Hugo的相关文件；&lt;/li&gt;
 &lt;li&gt;在Github中创建&amp;lt;USERNAME&amp;gt;.github.io代码仓库，用于存放网页文件；&lt;/li&gt;
-&lt;li&gt;git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;YOUR-PROJECT&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd &amp;lt;YOUR-PROJECT&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;将Hugo站点文件复制到本地仓库 &amp;lt;YOUR-PROJECT&amp;gt;&lt;/li&gt;
 &lt;li&gt;删除public文件夹&lt;/li&gt;
 &lt;/ul&gt;
@@ -59,7 +61,7 @@ hugo version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;建立submodule，将本地public代码仓库关联到&amp;lt;USERNAME&amp;gt;.github.io&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add -b master https://github.com/&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;lt;&lt;/span&gt;USERNAME&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;gt;&lt;/span&gt;/&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;lt;&lt;/span&gt;USERNAME&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;gt;&lt;/span&gt;.github.io.git public
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;3-code-servervscode作为markdown编辑器&#34;&gt;3. Code-server(vscode)作为Markdown编辑器&lt;/h4&gt;
 &lt;p&gt;Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
 &lt;img src=&#34;https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;

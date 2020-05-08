@@ -30,7 +30,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.1" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
 <link rel="canonical" href="http://x64.life/" />
@@ -335,7 +335,9 @@ hugo version
 <ul>
 <li>在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；</li>
 <li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
-<li>git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone &lt;YOUR-PROJECT-URL&gt; <span style="color:#f92672">&amp;&amp;</span> cd &lt;YOUR-PROJECT&gt;
+</code></pre></div><ul>
 <li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
 <li>删除public文件夹</li>
 </ul>
@@ -343,7 +345,7 @@ hugo version
 </code></pre></div><ul>
 <li>建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/<span style="color:#ae81ff">\&lt;</span>USERNAME<span style="color:#ae81ff">\&gt;</span>/<span style="color:#ae81ff">\&lt;</span>USERNAME<span style="color:#ae81ff">\&gt;</span>.github.io.git public
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
 <p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
 <img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
