@@ -328,7 +328,8 @@
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
-</code></pre><p>如果正确返回版本信息，说明已经安装成功</p>
+</code></pre>
+<p>如果正确返回版本信息，说明已经安装成功</p>
 <p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
 <h4 id="2-host-on-github">2. Host on Github</h4>
 <p>官方教程：</p>
@@ -351,20 +352,13 @@ hugo version
 <img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
 <p>code-server在Debian 10中的安装步骤：</p>
 <ul>
-<li>
-<p>从code-server的github下载最新版程序</p>
-</li>
-<li>
-<p>解压到任意目录,我放到/usr/local/下面</p>
-</li>
-<li>
-<p>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</p>
-</li>
-<li>
-<p>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</p>
-<p>code-server &ndash;auth none &ndash;bind-addr 0.0.0.0:8080</p>
-</li>
+<li>从code-server的github下载最新版程序</li>
+<li>解压到任意目录,我放到/usr/local/下面</li>
+<li>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</li>
+<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</li>
 </ul>
+<pre><code>code-server --auth none --bind-addr 0.0.0.0:8080
+</code></pre>
     </div>
     <div class="read-more">
       <a href="/post/hugo-github-vscode/" class="read-more-link">阅读全文</a>
