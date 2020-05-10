@@ -54,13 +54,20 @@ hugo version
 &lt;img src=&#34;https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;code-server在Debian 10中的安装步骤：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;从code-server的github下载最新版程序&lt;/li&gt;
-&lt;li&gt;解压到任意目录,我放到/usr/local/下面&lt;/li&gt;
-&lt;li&gt;建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接&lt;/li&gt;
-&lt;li&gt;启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;code-server --auth none --bind-addr 0.0.0.0:8080
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;li&gt;
+&lt;p&gt;从code-server的github下载最新版程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压到任意目录,我放到/usr/local/下面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0&lt;/p&gt;
+&lt;p&gt;code-server &amp;ndash;auth none &amp;ndash;bind-addr 0.0.0.0:8080&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

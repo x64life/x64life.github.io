@@ -31,7 +31,12 @@ apt-get install golang wget https://github.com/gohugoio/hugo/releases/download/v
 具体hugo建站流程参见官网教程Quick Start
 2. Host on Github 官方教程：
  在Github中创建一个代码仓库&amp;lt;YOUR-PROJECT&amp;gt;用于存放Hugo的相关文件； 在Github中创建&amp;lt;USERNAME&amp;gt;.github.io代码仓库，用于存放网页文件；  git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;YOUR-PROJECT&amp;gt;  将Hugo站点文件复制到本地仓库 &amp;lt;YOUR-PROJECT&amp;gt; 删除public文件夹  rm -rf public  建立submodule，将本地public代码仓库关联到&amp;lt;USERNAME&amp;gt;.github.io  git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public 3. Code-server(vscode)作为Markdown编辑器 Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。 code-server在Debian 10中的安装步骤：
- 从code-server的github下载最新版程序 解压到任意目录,我放到/usr/local/下面 建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接 启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0  code-server --auth none --bind-addr 0.0.0.0:8080 " />
+  从code-server的github下载最新版程序
+  解压到任意目录,我放到/usr/local/下面
+  建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
+  启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
+code-server &amp;ndash;auth none &amp;ndash;bind-addr 0.0.0.0:8080
+ " />
 
   <meta name="keywords" content="x64, life, 桀木" />
 
@@ -105,12 +110,19 @@ Code-server 的官方描述“Code-server is VS Code running on a remote server,
 
 code-server在Debian 10中的安装步骤：
 
-从code-server的github下载最新版程序
-解压到任意目录,我放到/usr/local/下面
-建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
-启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
 
-code-server --auth none --bind-addr 0.0.0.0:8080
+从code-server的github下载最新版程序
+
+
+解压到任意目录,我放到/usr/local/下面
+
+
+建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
+
+
+启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
+code-server &ndash;auth none &ndash;bind-addr 0.0.0.0:8080
+
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://x64.life/post/hugo-github-vscode/" />
@@ -154,12 +166,19 @@ Code-server 的官方描述“Code-server is VS Code running on a remote server,
 
 code-server在Debian 10中的安装步骤：
 
-从code-server的github下载最新版程序
-解压到任意目录,我放到/usr/local/下面
-建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
-启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
 
-code-server --auth none --bind-addr 0.0.0.0:8080
+从code-server的github下载最新版程序
+
+
+解压到任意目录,我放到/usr/local/下面
+
+
+建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
+
+
+启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
+code-server &ndash;auth none &ndash;bind-addr 0.0.0.0:8080
+
 ">
 <meta itemprop="datePublished" content="2020-05-05T22:50:18&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-05T22:50:18&#43;08:00" />
@@ -206,12 +225,19 @@ Code-server 的官方描述“Code-server is VS Code running on a remote server,
 
 code-server在Debian 10中的安装步骤：
 
-从code-server的github下载最新版程序
-解压到任意目录,我放到/usr/local/下面
-建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
-启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
 
-code-server --auth none --bind-addr 0.0.0.0:8080
+从code-server的github下载最新版程序
+
+
+解压到任意目录,我放到/usr/local/下面
+
+
+建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接
+
+
+启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0
+code-server &ndash;auth none &ndash;bind-addr 0.0.0.0:8080
+
 "/>
 
 <!--[if lte IE 9]>
@@ -494,13 +520,20 @@ hugo version
 <img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
 <p>code-server在Debian 10中的安装步骤：</p>
 <ul>
-<li>从code-server的github下载最新版程序</li>
-<li>解压到任意目录,我放到/usr/local/下面</li>
-<li>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</li>
-<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</li>
+<li>
+<p>从code-server的github下载最新版程序</p>
+</li>
+<li>
+<p>解压到任意目录,我放到/usr/local/下面</p>
+</li>
+<li>
+<p>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</p>
+</li>
+<li>
+<p>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</p>
+<p>code-server &ndash;auth none &ndash;bind-addr 0.0.0.0:8080</p>
+</li>
 </ul>
-<pre><code>code-server --auth none --bind-addr 0.0.0.0:8080
-</code></pre>
     </div>
 
     
