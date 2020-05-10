@@ -354,7 +354,7 @@ hugo version
 <li>从code-server的github下载最新版程序</li>
 <li>解压到任意目录,我放到/usr/local/下面</li>
 <li>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</li>
-<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要制定IP为0.0.0.0</li>
+<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</li>
 </ul>
 <pre><code>code-server --auth none --bind-addr 0.0.0.0:8080
 </code></pre>
@@ -529,7 +529,16 @@ hugo version
 
 
 
-
+<script id="tencent_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+	hm.src = "//tajs.qq.com/stats?sId=\x3cscript type=\x22text\/javascript\x22 src=\x22http:\/\/tajs.qq.com\/stats?sId=66554728\x22 charset=\x22UTF-8\x22\x3e\x3c\/script\x3e";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
 
 
