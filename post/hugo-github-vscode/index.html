@@ -20,7 +20,7 @@
 为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
  数据存放于群晖DS215j（家庭私有云） Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10  1. Hugo安装 通过SSH或者Unraid里的VNC Remote登录Debian 10
 下载并安装Go语言和最新版的Hugo：
-apt-get install golang wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb dpkg -i hugo_0.69.2_Linux-64bit.deb hugo version  如果正确返回版本信息，说明已经安装成功
+1 2 3 4  apt-get install golang wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb dpkg -i hugo_0.69.2_Linux-64bit.deb hugo version   如果正确返回版本信息，说明已经安装成功
 具体hugo建站流程参见官网教程Quick Start
 2. Host on Github 官方教程：
  在Github中创建一个代码仓库&amp;lt;YOUR-PROJECT&amp;gt;用于存放Hugo的相关文件； 在Github中创建&amp;lt;USERNAME&amp;gt;.github.io代码仓库，用于存放网页文件；  1  git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; cd &amp;lt;YOUR-PROJECT&amp;gt;    将Hugo站点文件复制到本地仓库 &amp;lt;YOUR-PROJECT&amp;gt; 删除public文件夹  1  rm -rf public    建立submodule，将本地public代码仓库关联到&amp;lt;USERNAME&amp;gt;.github.io  1  git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public   3. Code-server(vscode)作为Markdown编辑器 Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。 code-server在Debian 10中的安装步骤：
@@ -58,10 +58,19 @@ Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟�
 1. Hugo安装
 通过SSH或者Unraid里的VNC Remote登录Debian 10
 下载并安装Go语言和最新版的Hugo：
+
+
+1
+2
+3
+4
+
+
 apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
+
 
 如果正确返回版本信息，说明已经安装成功
 具体hugo建站流程参见官网教程Quick Start
@@ -136,10 +145,19 @@ Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟�
 1. Hugo安装
 通过SSH或者Unraid里的VNC Remote登录Debian 10
 下载并安装Go语言和最新版的Hugo：
+
+
+1
+2
+3
+4
+
+
 apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
+
 
 如果正确返回版本信息，说明已经安装成功
 具体hugo建站流程参见官网教程Quick Start
@@ -201,7 +219,7 @@ code-server --auth none --bind-addr 0.0.0.0:8080
 ">
 <meta itemprop="datePublished" content="2020-05-05T22:50:18&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-05T22:50:18&#43;08:00" />
-<meta itemprop="wordCount" content="816">
+<meta itemprop="wordCount" content="820">
 
 
 
@@ -217,10 +235,19 @@ Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟�
 1. Hugo安装
 通过SSH或者Unraid里的VNC Remote登录Debian 10
 下载并安装Go语言和最新版的Hugo：
+
+
+1
+2
+3
+4
+
+
 apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
+
 
 如果正确返回版本信息，说明已经安装成功
 具体hugo建站流程参见官网教程Quick Start
@@ -353,7 +380,7 @@ code-server --auth none --bind-addr 0.0.0.0:8080
         <div class="post-category">
             <a href="/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
             </div>
-          <span class="more-meta"> 约 816 字 </span>
+          <span class="more-meta"> 约 820 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -371,12 +398,21 @@ code-server --auth none --bind-addr 0.0.0.0:8080
 <h4 id="1-hugo安装">1. Hugo安装</h4>
 <p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
 下载并安装Go语言和最新版的Hugo：</p>
-<pre><code>apt-get install golang
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
-</code></pre>
-<p>如果正确返回版本信息，说明已经安装成功</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果正确返回版本信息，说明已经安装成功</p>
 <p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
 <h4 id="2-host-on-github">2. Host on Github</h4>
 <p>官方教程：</p>
@@ -389,7 +425,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone &lt;YOUR-PROJECT-URL&gt; <span class="o">&amp;&amp;</span> <span class="nb">cd</span> &lt;YOUR-PROJECT&gt;
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -401,7 +437,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rm -rf public
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -412,7 +448,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+<pre class="chroma"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
@@ -430,7 +466,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">code-server --auth none --bind-addr 0.0.0.0:8080
+<pre class="chroma"><code class="language-bash" data-lang="bash">code-server --auth none --bind-addr 0.0.0.0:8080
 </code></pre></td></tr></table>
 </div>
 </div>

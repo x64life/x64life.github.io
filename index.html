@@ -122,7 +122,7 @@
       <div class="post-category">
           <a href="/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
           </div>
-        <span class="more-meta"> 约 816 字 </span>
+        <span class="more-meta"> 约 820 字 </span>
         <span class="more-meta"> 预计阅读 2 分钟 </span>
     </div>
   </header>
@@ -139,12 +139,21 @@
 <h4 id="1-hugo安装">1. Hugo安装</h4>
 <p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
 下载并安装Go语言和最新版的Hugo：</p>
-<pre><code>apt-get install golang
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
-</code></pre>
-<p>如果正确返回版本信息，说明已经安装成功</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果正确返回版本信息，说明已经安装成功</p>
 <p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
 <h4 id="2-host-on-github">2. Host on Github</h4>
 <p>官方教程：</p>
@@ -157,7 +166,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone &lt;YOUR-PROJECT-URL&gt; <span class="o">&amp;&amp;</span> <span class="nb">cd</span> &lt;YOUR-PROJECT&gt;
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -169,7 +178,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rm -rf public
+<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -180,7 +189,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+<pre class="chroma"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
@@ -198,7 +207,7 @@ hugo version
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">code-server --auth none --bind-addr 0.0.0.0:8080
+<pre class="chroma"><code class="language-bash" data-lang="bash">code-server --auth none --bind-addr 0.0.0.0:8080
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -217,7 +226,7 @@ hugo version
       <div class="post-category">
           <a href="/categories/%E7%9E%8E%E6%89%AF/"> 瞎扯 </a>
           </div>
-        <span class="more-meta"> 约 129 字 </span>
+        <span class="more-meta"> 约 123 字 </span>
         <span class="more-meta"> 预计阅读 1 分钟 </span>
     </div>
   </header>
@@ -233,19 +242,6 @@ hugo version
 年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧</p>
 <h2 id="下面暂时没有了">下面暂时没有了</h2>
 <p>未完待续，哈哈哈</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">test</span>
-<span class="nb">test</span>
-<span class="nb">test</span>
-</code></pre></td></tr></table>
-</div>
-</div>
     </div>
     <div class="read-more">
       <a href="/post/first-post/" class="read-more-link">阅读更多</a>
