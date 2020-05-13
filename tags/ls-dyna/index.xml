@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ls-dyna on X64·Life</title>
+    <link>http://x64.life/tags/ls-dyna/</link>
+    <description>Recent content in ls-dyna on X64·Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 13 May 2020 21:15:15 +0800</lastBuildDate>
+    
+	<atom:link href="http://x64.life/tags/ls-dyna/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LSDYNA K文件加密与解密技术</title>
+      <link>http://x64.life/post/lsdyna-keyword-decrypt/</link>
+      <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
+      
+      <guid>http://x64.life/post/lsdyna-keyword-decrypt/</guid>
+      <description>&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
+&lt;p&gt;首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。&lt;/p&gt;
+&lt;p&gt;接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括&lt;code&gt;-----BEGIN&lt;/code&gt; 和 &lt;code&gt;-----END&lt;/code&gt; 之间的所有字符到文本文件并保存。导入命令为&lt;code&gt;gpg --import &amp;lt;filename&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;filename\&amp;gt;&lt;/code&gt; 是保存public key的文件名。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+mQGiBFM61ScRBACgqz7q7kytYuuRpa+1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
+CC6HRL2fMVRtBQZuy445eqsot5npcnzpQ6rcvsQZTVCqXH/gx5O5xs6/W8ktaJXn
+hBrxGabk6IzlOXYvmQ2+jOATfQs29pt4+e/+oXFI9EfKBHao2dEgtOWS6wCg+9gi
+9azFZOUIHV0EJDPFQJZrRFUD/11AG23e7964MN0HTWAWCIvPs8johwB7NOF6UjRR
+xuqD/ZqiQ1hhmQzJR89Weg0TeFFCVP+yK2tgPOgsXry/r7WF/RnO9S/7yvtTWHr8
+QPVxCur7vcKX/Lis6ByiyyDvihavBB6RgMYl5HkrEstTY/j3O09woxtQ4Pae5yZ2
+woj0BACI87Lk6aO/9wAVXBDYyufqX9bea/lbMEuQZ7qzBO7xjSwchYeoLUbCK5sh
+iGI+nT3+liqUZW8+KXd/6I+xsN+YXuS9olmeN5L391VF7ZnWcsOKLbr3tnA3TKJb
+Q/txpFhI/2CM2u0VU6w6DAAGlxic5Gf1Cdc8/mA5KaNEuq24PrRDTGl2ZXJtb3Jl
+IFNvZnR3YXJlIFRlY2hub2xvZ3kgQ29ycG9yYXRpb24gKExTVEMpIDxzdXBwb3J0
+QGxzdGMuY29tPohVBBMRAgAVAhsDAh4BAheABQJTOtVDAgsHAhYAAAoJECATgx5l
+rsCu0P4An2f9h8YuWfW+mNY1gm29nIs+kbeZAJ44HMvNgfOVtqUxUCyTlCLjwR6O
+CbkBDQRTOtUnEAQA4Q4D0F6l77N0e6XCIH49b7MHFyjkq3OdgHE4vylubEAXVeeX
+FD4Vrojn3t/I1QqAUG4ipZZAlLVrSYruzQLYaLhjYP124Py/b6vRo0FcyVsLbazj
+BxnGs+fFTrYspLaWfBK2dIrQ9ze9QSLhNous36W3em+fhx8hzGgcUUZRQOcAAwUD
+/RkrdN+Mbim6H6MNnEKhoXlpogzriCUB+hpxfQSP+go6+Np2RGkQfTEu+W51vrFA
+cW36cncp3OLpsvKzaQgTTT1rqb11Hoe/YpH3T9ngz4NX7a4OSDhHDKC1Q1BuzTEJ
+3A3RXeAgRaMV8+hFm91g2KWZuMeqd+nSo2sb5EvpFhW9iEkEGBECAAkFAlM61ScC
+GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh+1sSqkGCxzHEGER8AniHYve/Kn6CL
+SoAeXMxSC7F44Ood
+=R0pG
+-----END PGP PUBLIC KEY BLOCK-----
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假设需要加密的文件名为&lt;code&gt;input.key&lt;/code&gt;，加密命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假如你所使用的gpg软件是2.0以前的版本,&lt;code&gt;--rfc2440&lt;/code&gt; 标志可能不会被识别，可以尝试用&lt;code&gt;--openpgp&lt;/code&gt;替代.&lt;/p&gt;
+&lt;p&gt;命令执行后将会生成&lt;code&gt;input.key.asc&lt;/code&gt;文件，可以通过&lt;code&gt;*INCLUDE&lt;/code&gt;关键字导入主文件。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

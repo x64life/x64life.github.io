@@ -6,10 +6,19 @@
     <description>Recent content in Categories on X64·Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 May 2020 22:40:09 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 21:15:15 +0800</lastBuildDate>
     
 	<atom:link href="http://x64.life/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CAE技术</title>
+      <link>http://x64.life/categories/cae%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
+      
+      <guid>http://x64.life/categories/cae%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>IT技术</title>

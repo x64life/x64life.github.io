@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>X64·Life</title>
+  <title>LSDYNA K文件加密与解密技术 - X64·Life</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="J哥" /><meta name="description" content="桀木的笔记" /><meta name="keywords" content="x64, life, 桀木" />
+<meta name="author" content="J哥" /><meta name="description" content="LS-DYNA k文件加密与解密" /><meta name="keywords" content="x64, life, 桀木" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.70.0 with theme even" />
 
 
-<link rel="canonical" href="http://x64.life/" />
-  <link href="http://x64.life/index.xml" rel="alternate" type="application/rss+xml" title="X64·Life" />
-  <link href="http://x64.life/index.xml" rel="feed" type="application/rss+xml" title="X64·Life" />
+<link rel="canonical" href="http://x64.life/post/lsdyna-keyword-decrypt/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="X64·Life" />
-<meta property="og:description" content="桀木的笔记" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://x64.life/" />
-<meta property="og:updated_time" content="2020-05-04T21:38:52+08:00" />
-<meta itemprop="name" content="X64·Life">
-<meta itemprop="description" content="桀木的笔记"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="X64·Life"/>
-<meta name="twitter:description" content="桀木的笔记"/>
+<meta property="og:title" content="LSDYNA K文件加密与解密技术" />
+<meta property="og:description" content="LS-DYNA k文件加密与解密" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://x64.life/post/lsdyna-keyword-decrypt/" />
+<meta property="article:published_time" content="2020-05-13T21:15:15+08:00" />
+<meta property="article:modified_time" content="2020-05-13T21:15:15+08:00" />
+<meta itemprop="name" content="LSDYNA K文件加密与解密技术">
+<meta itemprop="description" content="LS-DYNA k文件加密与解密">
+<meta itemprop="datePublished" content="2020-05-13T21:15:15&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-13T21:15:15&#43;08:00" />
+<meta itemprop="wordCount" content="844">
+
+
+
+<meta itemprop="keywords" content="ls-dyna,," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LSDYNA K文件加密与解密技术"/>
+<meta name="twitter:description" content="LS-DYNA k文件加密与解密"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -113,22 +119,24 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/lsdyna-keyword-decrypt/">LSDYNA K文件加密与解密技术</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-13 </span>
-      <div class="post-category">
-          <a href="/categories/cae%E6%8A%80%E6%9C%AF/"> CAE技术 </a>
-          </div>
-        <span class="more-meta"> 约 844 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LSDYNA K文件加密与解密技术</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-13 </span>
+        <div class="post-category">
+            <a href="/categories/cae%E6%8A%80%E6%9C%AF/"> CAE技术 </a>
+            </div>
+          <span class="more-meta"> 约 844 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
       <p>按照下述步骤进行LS-DYNA k文件的加密操作:</p>
 <p>首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。</p>
 <p>接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括<code>-----BEGIN</code> 和 <code>-----END</code> 之间的所有字符到文本文件并保存。导入命令为<code>gpg --import &lt;filename&gt;</code>, <code>&lt;filename\&gt;</code> 是保存public key的文件名。</p>
@@ -199,192 +207,152 @@ SoAeXMxSC7F44Ood
 </div>
 </div><p>假如你所使用的gpg软件是2.0以前的版本,<code>--rfc2440</code> 标志可能不会被识别，可以尝试用<code>--openpgp</code>替代.</p>
 <p>命令执行后将会生成<code>input.key.asc</code>文件，可以通过<code>*INCLUDE</code>关键字导入主文件。</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/lsdyna-keyword-decrypt/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/emby-fake-auth/">建立虚假Emby验证服务器获得高级会员</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-12 </span>
-      <div class="post-category">
-          <a href="/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
-          </div>
-        <span class="more-meta"> 约 673 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>声明：本文仅供学习研究,切勿用于非法用途</p>
-<p>Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。</p>
-<p>因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。</p>
-<p>简单记录一下步骤：</p>
-<ol>
-<li>
-<p>修改OP路由器的host文件，使得域名mb3admin.com指向VPS的IP</p>
-</li>
-<li>
-<p>准备证书，可以通过<a href="https://www.gmcert.org/subForm">GMCert.org</a>进行线上签发：</p>
-<ul>
-<li>选择RSA算法，2048位加密，主题名称/CN填入“mb3admin.com”</li>
-<li>“选择CA”条目的最后面有个“↓”，点击下载CA证书</li>
-<li>打开高级选项，选择普通证书</li>
-<li>主题备用名称填</li>
-</ul>
-<blockquote>
-<p>DNS.1=mb3admin.com<br>
-DNS.2=*.mb3admin.com</p>
-</blockquote>
-<ul>
-<li>密钥用途：数字签名 | 加密密钥 | 加密数据</li>
-<li>扩展密钥用途：服务器认证 | 客户端认证</li>
-<li>证书有效天数：824</li>
-<li>证书链选项中勾选“自动包含CA证书链”</li>
-<li>点击“签发证书”，下载密钥和SSL证书</li>
-</ul>
-</li>
-<li>
-<p>将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等</p>
-</li>
-</ol>
-    </div>
-    <div class="read-more">
-      <a href="/post/emby-fake-auth/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/hugo-github-vscode/">Hugo&#43;Github Pasges建立个人博客</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-05 </span>
-      <div class="post-category">
-          <a href="/categories/it%E6%8A%80%E6%9C%AF/"> IT技术 </a>
-          </div>
-        <span class="more-meta"> 约 820 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h4 id="前言">前言</h4>
-<p>此贴用于记录本站的建立过程。<br>
-为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：</p>
-<ol>
-<li>数据存放于群晖DS215j（家庭私有云）</li>
-<li>Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10</li>
-</ol>
-<h4 id="1-hugo安装">1. Hugo安装</h4>
-<p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
-下载并安装Go语言和最新版的Hugo：</p>
+<p>如果觉得加密强度不够，可以使用下述2048bits的public key替换上述1024bits的key（实际上没什么用，该被破解的还是会被破解）:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install golang
-wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
-dpkg -i hugo_0.69.2_Linux-64bit.deb
-hugo version
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+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
+=xfll
+-----END PGP PUBLIC KEY BLOCK-----
 </code></pre></td></tr></table>
 </div>
-</div><p>如果正确返回版本信息，说明已经安装成功</p>
-<p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
-<h4 id="2-host-on-github">2. Host on Github</h4>
-<p>官方教程：</p>
+</div><p>使用2048bits的public key时，需要把上面加密命令里的<code>-r 0x65AEC0AE</code>替换为<code>-r 0x60C0435A</code></p>
+<p>Windows用户使用提示:</p>
 <ul>
-<li>在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；</li>
-<li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
+<li>将LSTC public key保存为lstcpgp.txt，假设保存到了d:\lstc_public_key\lstcpgp.txt</li>
+<li>安装 Gpg4win，假设安装到C:\Program Files (x86)\GNU\GnuPG\</li>
+<li>通过Win+R，输入cmd打开Dos命令行</li>
+<li>通过cd命令进入input.key文件存放的文件夹</li>
+<li>执行以下命令导入public key</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone &lt;YOUR-PROJECT-URL&gt; <span class="o">&amp;&amp;</span> <span class="nb">cd</span> &lt;YOUR-PROJECT&gt;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;C:\Program Files (x86)\GNU\GnuPG\gpg2.exe&#34;  --import d:\lstc_public_key\lstcpgp.txt
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
-<li>删除public文件夹</li>
+<li>运行以下命令加密文件</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf public
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;C:\Program Files (x86)\GNU\GnuPG\gpg2.exe&#34; -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
-</code></pre></td></tr></table>
-</div>
-</div>
+</div><h3 id="加密容易解密难如有加密k文件破解解密需求的话请邮件联系-uzjtech126com提供有偿解密服务">加密容易解密难，如有加密k文件破解/解密需求的话请邮件联系 <a href="mailto:uzjtech@126.com">uzjtech@126.com</a>，提供有偿解密服务。</h3>
     </div>
-    <div class="read-more">
-      <a href="/post/hugo-github-vscode/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/first-post/">第一篇文章</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-05-04 </span>
-      <div class="post-category">
-          <a href="/categories/%E7%9E%8E%E6%89%AF/"> 瞎扯 </a>
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ls-dyna/">ls-dyna</a>
+          <a href="/tags//"></a>
           </div>
-        <span class="more-meta"> 约 123 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>第一篇文章，说到哪里是哪里吧&hellip;</p>
-<h2 id="我是谁">我是谁？</h2>
-<p>网名：J哥 | 职业：汽车工程师 | 业余爱好：IT技术<br>
-更多信息参见 <a href="http://x64.life/about/">关于</a> 页面</p>
-<h2 id="为什么写">为什么写？</h2>
-<p>学习 | 记录 | 分享<br>
-年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧</p>
-<h2 id="下面暂时没有了">下面暂时没有了</h2>
-<p>未完待续，哈哈哈</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/first-post/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    
-    
-  </nav>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/emby-fake-auth/">
+            <span class="next-text nav-default">建立虚假Emby验证服务器获得高级会员</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="x64life/comments-for-pages"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
 
       </div>
     </main>
