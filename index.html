@@ -78,10 +78,10 @@
         <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">全部文章</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">分类</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
       </a><a href="/about/">
         <li class="mobile-menu-item">关于</li>
       </a>
@@ -100,9 +100,9 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">全部文章</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">关于</a>
       </li>
@@ -160,76 +160,6 @@ DNS.2=*.mb3admin.com</p>
 <li>
 <p>将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等</p>
 </li>
-<li>
-<p>在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值</p>
-</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">server { 
-    listen      80; 
-    listen      443 ssl; 
-    server_name mb3admin.com; 
-    ssl_certificate     /var/www/embyact/ssl.pem; 
-    ssl_certificate_key /var/www/embyact/ssl.key; 
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2; 
-    ssl_ciphers         HIGH:!aNULL:!MD5; 
-    location / { 
-        root   /var/www/embyact; 
-        index  index.html; 
-    } 
-    location /admin/service/registration/validateDevice { 
-        default_type application/json; 
-        return 200 &#39;{&#34;cacheExpirationDays&#34;:365,&#34;message&#34;: &#34;Device Valid&#34;,&#34;resultCode&#34;: &#34;GOOD&#34;}&#39;; 
-    } 
-    location /admin/service/registration/validate { 
-        default_type application/json; 
-        return 200 &#39;{&#34;featId&#34;:&#34;&#34;,&#34;registered&#34;:true,&#34;expDate&#34;:&#34;2099-01-01&#34;,&#34;key&#34;:&#34;&#34;}&#39;; 
-    } 
-    location /admin/service/registration/getStatus { 
-        default_type application/json; 
-        return 200 &#39;{&#34;deviceStatus&#34;:&#34;&#34;,&#34;planType&#34;:&#34;&#34;,&#34;subscriptions&#34;:{}}&#39;; 
-    } 
-    add_header Access-Control-Allow-Origin *; 
-    add_header Access-Control-Allow-Headers *; 
-    add_header Access-Control-Allow-Method *; 
-    add_header Access-Control-Allow-Credentials true; 
-}
-</code></pre></td></tr></table>
-</div>
-</div><ol start="5">
-<li>在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加）</li>
 </ol>
     </div>
     <div class="read-more">
@@ -314,24 +244,6 @@ hugo version
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
-<p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
-<img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
-<p>code-server在Debian 10中的安装步骤：</p>
-<ul>
-<li>从code-server的github下载最新版程序</li>
-<li>解压到任意目录,我放到/usr/local/下面</li>
-<li>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</li>
-<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">code-server --auth none --bind-addr 0.0.0.0:8080
 </code></pre></td></tr></table>
 </div>
 </div>

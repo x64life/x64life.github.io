@@ -80,24 +80,6 @@ hugo version
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;3-code-servervscode作为markdown编辑器&#34;&gt;3. Code-server(vscode)作为Markdown编辑器&lt;/h4&gt;
-&lt;p&gt;Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
-&lt;img src=&#34;https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;code-server在Debian 10中的安装步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从code-server的github下载最新版程序&lt;/li&gt;
-&lt;li&gt;解压到任意目录,我放到/usr/local/下面&lt;/li&gt;
-&lt;li&gt;建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接&lt;/li&gt;
-&lt;li&gt;启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;code-server --auth none --bind-addr 0.0.0.0:8080
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
     

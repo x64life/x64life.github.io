@@ -25,8 +25,7 @@ Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，�
  选择RSA算法，2048位加密，主题名称/CN填入“mb3admin.com” “选择CA”条目的最后面有个“↓”，点击下载CA证书 打开高级选项，选择普通证书 主题备用名称填   DNS.1=mb3admin.com
 DNS.2=*.mb3admin.com
   密钥用途：数字签名 | 加密密钥 | 加密数据 扩展密钥用途：服务器认证 | 客户端认证 证书有效天数：824 证书链选项中勾选“自动包含CA证书链” 点击“签发证书”，下载密钥和SSL证书    将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等
-  在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值
-  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  server { listen 80; listen 443 ssl; server_name mb3admin.com; ssl_certificate /var/www/embyact/ssl.pem; ssl_certificate_key /var/www/embyact/ssl.key; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_ciphers HIGH:!aNULL:!MD5; location / { root /var/www/embyact; index index.html; } location /admin/service/registration/validateDevice { default_type application/json; return 200 &amp;#39;{&amp;#34;cacheExpirationDays&amp;#34;:365,&amp;#34;message&amp;#34;: &amp;#34;Device Valid&amp;#34;,&amp;#34;resultCode&amp;#34;: &amp;#34;GOOD&amp;#34;}&amp;#39;; } location /admin/service/registration/validate { default_type application/json; return 200 &amp;#39;{&amp;#34;featId&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;registered&amp;#34;:true,&amp;#34;expDate&amp;#34;:&amp;#34;2099-01-01&amp;#34;,&amp;#34;key&amp;#34;:&amp;#34;&amp;#34;}&amp;#39;; } location /admin/service/registration/getStatus { default_type application/json; return 200 &amp;#39;{&amp;#34;deviceStatus&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;planType&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;subscriptions&amp;#34;:{}}&amp;#39;; } add_header Access-Control-Allow-Origin *; add_header Access-Control-Allow-Headers *; add_header Access-Control-Allow-Method *; add_header Access-Control-Allow-Credentials true; }   在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加） " /><meta name="keywords" content="emby" />
+ " /><meta name="keywords" content="emby" />
 
 
 
@@ -81,76 +80,6 @@ DNS.2=*.mb3admin.com
 
 将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等
 
-
-在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值
-
-
-
-
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-
-
-server { 
-    listen      80; 
-    listen      443 ssl; 
-    server_name mb3admin.com; 
-    ssl_certificate     /var/www/embyact/ssl.pem; 
-    ssl_certificate_key /var/www/embyact/ssl.key; 
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2; 
-    ssl_ciphers         HIGH:!aNULL:!MD5; 
-    location / { 
-        root   /var/www/embyact; 
-        index  index.html; 
-    } 
-    location /admin/service/registration/validateDevice { 
-        default_type application/json; 
-        return 200 &#39;{&#34;cacheExpirationDays&#34;:365,&#34;message&#34;: &#34;Device Valid&#34;,&#34;resultCode&#34;: &#34;GOOD&#34;}&#39;; 
-    } 
-    location /admin/service/registration/validate { 
-        default_type application/json; 
-        return 200 &#39;{&#34;featId&#34;:&#34;&#34;,&#34;registered&#34;:true,&#34;expDate&#34;:&#34;2099-01-01&#34;,&#34;key&#34;:&#34;&#34;}&#39;; 
-    } 
-    location /admin/service/registration/getStatus { 
-        default_type application/json; 
-        return 200 &#39;{&#34;deviceStatus&#34;:&#34;&#34;,&#34;planType&#34;:&#34;&#34;,&#34;subscriptions&#34;:{}}&#39;; 
-    } 
-    add_header Access-Control-Allow-Origin *; 
-    add_header Access-Control-Allow-Headers *; 
-    add_header Access-Control-Allow-Method *; 
-    add_header Access-Control-Allow-Credentials true; 
-}
-
-
-
-在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加）
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://x64.life/post/emby-fake-auth/" />
@@ -188,76 +117,6 @@ DNS.2=*.mb3admin.com
 
 将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等
 
-
-在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值
-
-
-
-
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-
-
-server { 
-    listen      80; 
-    listen      443 ssl; 
-    server_name mb3admin.com; 
-    ssl_certificate     /var/www/embyact/ssl.pem; 
-    ssl_certificate_key /var/www/embyact/ssl.key; 
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2; 
-    ssl_ciphers         HIGH:!aNULL:!MD5; 
-    location / { 
-        root   /var/www/embyact; 
-        index  index.html; 
-    } 
-    location /admin/service/registration/validateDevice { 
-        default_type application/json; 
-        return 200 &#39;{&#34;cacheExpirationDays&#34;:365,&#34;message&#34;: &#34;Device Valid&#34;,&#34;resultCode&#34;: &#34;GOOD&#34;}&#39;; 
-    } 
-    location /admin/service/registration/validate { 
-        default_type application/json; 
-        return 200 &#39;{&#34;featId&#34;:&#34;&#34;,&#34;registered&#34;:true,&#34;expDate&#34;:&#34;2099-01-01&#34;,&#34;key&#34;:&#34;&#34;}&#39;; 
-    } 
-    location /admin/service/registration/getStatus { 
-        default_type application/json; 
-        return 200 &#39;{&#34;deviceStatus&#34;:&#34;&#34;,&#34;planType&#34;:&#34;&#34;,&#34;subscriptions&#34;:{}}&#39;; 
-    } 
-    add_header Access-Control-Allow-Origin *; 
-    add_header Access-Control-Allow-Headers *; 
-    add_header Access-Control-Allow-Method *; 
-    add_header Access-Control-Allow-Credentials true; 
-}
-
-
-
-在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加）
 ">
 <meta itemprop="datePublished" content="2020-05-12T22:40:09&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-12T22:40:09&#43;08:00" />
@@ -298,76 +157,6 @@ DNS.2=*.mb3admin.com
 
 将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等
 
-
-在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值
-
-
-
-
- 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-
-
-server { 
-    listen      80; 
-    listen      443 ssl; 
-    server_name mb3admin.com; 
-    ssl_certificate     /var/www/embyact/ssl.pem; 
-    ssl_certificate_key /var/www/embyact/ssl.key; 
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2; 
-    ssl_ciphers         HIGH:!aNULL:!MD5; 
-    location / { 
-        root   /var/www/embyact; 
-        index  index.html; 
-    } 
-    location /admin/service/registration/validateDevice { 
-        default_type application/json; 
-        return 200 &#39;{&#34;cacheExpirationDays&#34;:365,&#34;message&#34;: &#34;Device Valid&#34;,&#34;resultCode&#34;: &#34;GOOD&#34;}&#39;; 
-    } 
-    location /admin/service/registration/validate { 
-        default_type application/json; 
-        return 200 &#39;{&#34;featId&#34;:&#34;&#34;,&#34;registered&#34;:true,&#34;expDate&#34;:&#34;2099-01-01&#34;,&#34;key&#34;:&#34;&#34;}&#39;; 
-    } 
-    location /admin/service/registration/getStatus { 
-        default_type application/json; 
-        return 200 &#39;{&#34;deviceStatus&#34;:&#34;&#34;,&#34;planType&#34;:&#34;&#34;,&#34;subscriptions&#34;:{}}&#39;; 
-    } 
-    add_header Access-Control-Allow-Origin *; 
-    add_header Access-Control-Allow-Headers *; 
-    add_header Access-Control-Allow-Method *; 
-    add_header Access-Control-Allow-Credentials true; 
-}
-
-
-
-在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加）
 "/>
 
 <!--[if lte IE 9]>
@@ -397,10 +186,10 @@ server {
         <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">全部文章</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
         <li class="mobile-menu-item">分类</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
       </a><a href="/about/">
         <li class="mobile-menu-item">关于</li>
       </a>
@@ -419,9 +208,9 @@ server {
       </li><li class="menu-item">
         <a class="menu-item-link" href="/post/">全部文章</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">关于</a>
       </li>
@@ -481,9 +270,9 @@ DNS.2=*.mb3admin.com</p>
 <li>
 <p>将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等</p>
 </li>
-<li>
-<p>在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值</p>
-</li>
+</ol>
+<ol start="4">
+<li>在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
