@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>X64·Life</title>
@@ -7,32 +8,57 @@
     <language>zh-cn</language>
     <lastBuildDate>Mon, 04 May 2020 21:38:52 +0800</lastBuildDate>
     
-        <atom:link href="http://x64.life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://x64.life/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>关于</title>
+      <link>http://x64.life/about/</link>
+      <pubDate>Mon, 04 May 2020 21:38:52 +0800</pubDate>
+      
+      <guid>http://x64.life/about/</guid>
+      <description>对不起，我还没想好怎么写</description>
+    </item>
     
-        <item>
-        <title>关于</title>
-        <link>http://x64.life/about/</link>
-        <pubDate>Mon, 04 May 2020 21:38:52 +0800</pubDate>
-        
-        <guid>http://x64.life/about/</guid>
-        <description>X64·Life http://x64.life/about/ -&lt;p&gt;对不起，我还没想好怎么写&lt;/p&gt;
-- http://x64.life/about/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>LSDYNA K文件加密与解密技术</title>
-        <link>http://x64.life/post/lsdyna-keyword-decrypt/</link>
-        <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
-        
-        <guid>http://x64.life/post/lsdyna-keyword-decrypt/</guid>
-        <description>X64·Life http://x64.life/post/lsdyna-keyword-decrypt/ -&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
+    <item>
+      <title>LSDYNA K文件加密与解密技术</title>
+      <link>http://x64.life/post/lsdyna-keyword-decrypt/</link>
+      <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
+      
+      <guid>http://x64.life/post/lsdyna-keyword-decrypt/</guid>
+      <description>&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
 &lt;p&gt;首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。&lt;/p&gt;
 &lt;p&gt;接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括&lt;code&gt;-----BEGIN&lt;/code&gt; 和 &lt;code&gt;-----END&lt;/code&gt; 之间的所有字符到文本文件并保存。导入命令为&lt;code&gt;gpg --import &amp;lt;filename&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;filename\&amp;gt;&lt;/code&gt; 是保存public key的文件名。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.19 (GNU/Linux)
 
 mQGiBFM61ScRBACgqz7q7kytYuuRpa+1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
@@ -57,76 +83,28 @@ GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh+1sSqkGCxzHEGER8AniHYve/Kn6CL
 SoAeXMxSC7F44Ood
 =R0pG
 -----END PGP PUBLIC KEY BLOCK-----
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;假设需要加密的文件名为&lt;code&gt;input.key&lt;/code&gt;，加密命令如下:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;假如你所使用的gpg软件是2.0以前的版本,&lt;code&gt;--rfc2440&lt;/code&gt; 标志可能不会被识别，可以尝试用&lt;code&gt;--openpgp&lt;/code&gt;替代.&lt;/p&gt;
-&lt;p&gt;命令执行后将会生成&lt;code&gt;input.key.asc&lt;/code&gt;文件，可以通过&lt;code&gt;*INCLUDE&lt;/code&gt;关键字导入主文件。&lt;/p&gt;
-&lt;p&gt;如果觉得加密强度不够，可以使用下述2048bits的public key替换上述1024bits的key（实际上没什么用，该被破解的还是会被破解）:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v2.0.19 (GNU/Linux)
-
-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
-=xfll
------END PGP PUBLIC KEY BLOCK-----
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用2048bits的public key时，需要把上面加密命令里的&lt;code&gt;-r 0x65AEC0AE&lt;/code&gt;替换为&lt;code&gt;-r 0x60C0435A&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Windows用户使用提示:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将LSTC public key保存为lstcpgp.txt，假设保存到了d:\lstc_public_key\lstcpgp.txt&lt;/li&gt;
-&lt;li&gt;安装 Gpg4win，假设安装到C:\Program Files (x86)\GNU\GnuPG\&lt;/li&gt;
-&lt;li&gt;通过Win+R，输入cmd打开Dos命令行&lt;/li&gt;
-&lt;li&gt;通过cd命令进入input.key文件存放的文件夹&lt;/li&gt;
-&lt;li&gt;执行以下命令导入public key&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\GNU\GnuPG\gpg2.exe&amp;quot;  --import d:\lstc_public_key\lstcpgp.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;运行以下命令加密文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;&amp;quot;C:\Program Files (x86)\GNU\GnuPG\gpg2.exe&amp;quot; -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;加密容易解密难如有加密k文件破解解密需求的话请邮件联系-uzjtech126com提供有偿解密服务&#34;&gt;加密容易解密难，如有加密k文件破解/解密需求的话请邮件联系 &lt;a href=&#34;mailto:uzjtech@126.com&#34;&gt;uzjtech@126.com&lt;/a&gt;，提供有偿解密服务。&lt;/h3&gt;- http://x64.life/post/lsdyna-keyword-decrypt/ - </description>
-        </item>
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假设需要加密的文件名为&lt;code&gt;input.key&lt;/code&gt;，加密命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假如你所使用的gpg软件是2.0以前的版本,&lt;code&gt;--rfc2440&lt;/code&gt; 标志可能不会被识别，可以尝试用&lt;code&gt;--openpgp&lt;/code&gt;替代.&lt;/p&gt;
+&lt;p&gt;命令执行后将会生成&lt;code&gt;input.key.asc&lt;/code&gt;文件，可以通过&lt;code&gt;*INCLUDE&lt;/code&gt;关键字导入主文件。&lt;/p&gt;</description>
+    </item>
     
-    
-    
-        <item>
-        <title>建立虚假Emby验证服务器获得高级会员</title>
-        <link>http://x64.life/post/emby-fake-auth/</link>
-        <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
-        
-        <guid>http://x64.life/post/emby-fake-auth/</guid>
-        <description>X64·Life http://x64.life/post/emby-fake-auth/ -&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
+    <item>
+      <title>建立虚假Emby验证服务器获得高级会员</title>
+      <link>http://x64.life/post/emby-fake-auth/</link>
+      <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
+      
+      <guid>http://x64.life/post/emby-fake-auth/</guid>
+      <description>&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
 &lt;p&gt;Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。&lt;/p&gt;
 &lt;p&gt;因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。&lt;/p&gt;
 &lt;p&gt;简单记录一下步骤：&lt;/p&gt;
@@ -157,53 +135,16 @@ DNS.2=*.mb3admin.com&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;将密钥和SSL证书上传到VPS，将CA证书安装到PC/iOS设备/Android设备等&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;在VPS上通过nginx部署验证服务器，添加密钥和证书，通过伪静态配置实现验证所需的返回值&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;server { 
-    listen      80; 
-    listen      443 ssl; 
-    server_name mb3admin.com; 
-    ssl_certificate     /var/www/embyact/ssl.pem; 
-    ssl_certificate_key /var/www/embyact/ssl.key; 
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2; 
-    ssl_ciphers         HIGH:!aNULL:!MD5; 
-    location / { 
-        root   /var/www/embyact; 
-        index  index.html; 
-    } 
-    location /admin/service/registration/validateDevice { 
-        default_type application/json; 
-        return 200 &#39;{&amp;quot;cacheExpirationDays&amp;quot;:365,&amp;quot;message&amp;quot;: &amp;quot;Device Valid&amp;quot;,&amp;quot;resultCode&amp;quot;: &amp;quot;GOOD&amp;quot;}&#39;; 
-    } 
-    location /admin/service/registration/validate { 
-        default_type application/json; 
-        return 200 &#39;{&amp;quot;featId&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;registered&amp;quot;:true,&amp;quot;expDate&amp;quot;:&amp;quot;2099-01-01&amp;quot;,&amp;quot;key&amp;quot;:&amp;quot;&amp;quot;}&#39;; 
-    } 
-    location /admin/service/registration/getStatus { 
-        default_type application/json; 
-        return 200 &#39;{&amp;quot;deviceStatus&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;planType&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;subscriptions&amp;quot;:{}}&#39;; 
-    } 
-    add_header Access-Control-Allow-Origin *; 
-    add_header Access-Control-Allow-Headers *; 
-    add_header Access-Control-Allow-Method *; 
-    add_header Access-Control-Allow-Credentials true; 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;在安装Emby服务端的服务器或Docker中添加CA证书（搜索ca-certificates.crt和ca-bundle.crt文件进行添加）&lt;/li&gt;
-&lt;/ol&gt;- http://x64.life/post/emby-fake-auth/ - </description>
-        </item>
+&lt;/ol&gt;</description>
+    </item>
     
-    
-    
-        <item>
-        <title>Hugo&#43;Github Pasges建立个人博客</title>
-        <link>http://x64.life/post/hugo-github-vscode/</link>
-        <pubDate>Tue, 05 May 2020 22:50:18 +0800</pubDate>
-        
-        <guid>http://x64.life/post/hugo-github-vscode/</guid>
-        <description>X64·Life http://x64.life/post/hugo-github-vscode/ -&lt;h4 id=&#34;前言&#34;&gt;前言&lt;/h4&gt;
+    <item>
+      <title>Hugo&#43;Github Pasges建立个人博客</title>
+      <link>http://x64.life/post/hugo-github-vscode/</link>
+      <pubDate>Tue, 05 May 2020 22:50:18 +0800</pubDate>
+      
+      <guid>http://x64.life/post/hugo-github-vscode/</guid>
+      <description>&lt;h4 id=&#34;前言&#34;&gt;前言&lt;/h4&gt;
 &lt;p&gt;此贴用于记录本站的建立过程。&lt;br&gt;
 为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：&lt;/p&gt;
 &lt;ol&gt;
@@ -213,11 +154,21 @@ DNS.2=*.mb3admin.com&lt;/p&gt;
 &lt;h4 id=&#34;1-hugo安装&#34;&gt;1. Hugo安装&lt;/h4&gt;
 &lt;p&gt;通过SSH或者Unraid里的VNC Remote登录Debian 10&lt;br&gt;
 下载并安装Go语言和最新版的Hugo：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install golang
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install golang
 wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
 dpkg -i hugo_0.69.2_Linux-64bit.deb
 hugo version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果正确返回版本信息，说明已经安装成功&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果正确返回版本信息，说明已经安装成功&lt;/p&gt;
 &lt;p&gt;具体hugo建站流程参见官网教程&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Quick Start&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2-host-on-github&#34;&gt;2. Host on Github&lt;/h4&gt;
 &lt;p&gt;官方教程：&lt;/p&gt;
@@ -225,39 +176,47 @@ hugo version
 &lt;li&gt;在Github中创建一个代码仓库&amp;lt;YOUR-PROJECT&amp;gt;用于存放Hugo的相关文件；&lt;/li&gt;
 &lt;li&gt;在Github中创建&amp;lt;USERNAME&amp;gt;.github.io代码仓库，用于存放网页文件；&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &amp;amp;&amp;amp; &lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; &amp;lt;YOUR-PROJECT&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone &amp;lt;YOUR-PROJECT-URL&amp;gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &amp;lt;YOUR-PROJECT&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;将Hugo站点文件复制到本地仓库 &amp;lt;YOUR-PROJECT&amp;gt;&lt;/li&gt;
 &lt;li&gt;删除public文件夹&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf public
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf public
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;建立submodule，将本地public代码仓库关联到&amp;lt;USERNAME&amp;gt;.github.io&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;3-code-servervscode作为markdown编辑器&#34;&gt;3. Code-server(vscode)作为Markdown编辑器&lt;/h4&gt;
-&lt;p&gt;Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
-&lt;img src=&#34;https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;code-server在Debian 10中的安装步骤：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;从code-server的github下载最新版程序&lt;/li&gt;
-&lt;li&gt;解压到任意目录,我放到/usr/local/下面&lt;/li&gt;
-&lt;li&gt;建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接&lt;/li&gt;
-&lt;li&gt;启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;code-server --auth none --bind-addr 0.0.0.0:8080
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- http://x64.life/post/hugo-github-vscode/ - </description>
-        </item>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add -b master https://github.com/&amp;lt;USERNAME&amp;gt;/&amp;lt;USERNAME&amp;gt;.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
     
-    
-    
-        <item>
-        <title>第一篇文章</title>
-        <link>http://x64.life/post/first-post/</link>
-        <pubDate>Mon, 04 May 2020 03:25:56 +0800</pubDate>
-        
-        <guid>http://x64.life/post/first-post/</guid>
-        <description>X64·Life http://x64.life/post/first-post/ -&lt;p&gt;第一篇文章，说到哪里是哪里吧&amp;hellip;&lt;/p&gt;
+    <item>
+      <title>第一篇文章</title>
+      <link>http://x64.life/post/first-post/</link>
+      <pubDate>Mon, 04 May 2020 03:25:56 +0800</pubDate>
+      
+      <guid>http://x64.life/post/first-post/</guid>
+      <description>&lt;p&gt;第一篇文章，说到哪里是哪里吧&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;我是谁&#34;&gt;我是谁？&lt;/h2&gt;
 &lt;p&gt;网名：J哥 | 职业：汽车工程师 | 业余爱好：IT技术&lt;br&gt;
 更多信息参见 &lt;a href=&#34;http://x64.life/about/&#34;&gt;关于&lt;/a&gt; 页面&lt;/p&gt;
@@ -265,9 +224,8 @@ hugo version
 &lt;p&gt;学习 | 记录 | 分享&lt;br&gt;
 年纪大了，有些事情靠脑子记不住了，俗话说好记性不如烂笔头，还是写下来吧&lt;/p&gt;
 &lt;h2 id=&#34;下面暂时没有了&#34;&gt;下面暂时没有了&lt;/h2&gt;
-&lt;p&gt;未完待续，哈哈哈&lt;/p&gt;- http://x64.life/post/first-post/ - </description>
-        </item>
-    
+&lt;p&gt;未完待续，哈哈哈&lt;/p&gt;</description>
+    </item>
     
   </channel>
-</rss> 
+</rss>

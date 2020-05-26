@@ -20,7 +20,36 @@
       <description>&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
 &lt;p&gt;首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。&lt;/p&gt;
 &lt;p&gt;接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括&lt;code&gt;-----BEGIN&lt;/code&gt; 和 &lt;code&gt;-----END&lt;/code&gt; 之间的所有字符到文本文件并保存。导入命令为&lt;code&gt;gpg --import &amp;lt;filename&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;filename\&amp;gt;&lt;/code&gt; 是保存public key的文件名。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.19 (GNU/Linux)
 
 mQGiBFM61ScRBACgqz7q7kytYuuRpa+1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
@@ -45,9 +74,18 @@ GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh+1sSqkGCxzHEGER8AniHYve/Kn6CL
 SoAeXMxSC7F44Ood
 =R0pG
 -----END PGP PUBLIC KEY BLOCK-----
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;假设需要加密的文件名为&lt;code&gt;input.key&lt;/code&gt;，加密命令如下:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;假如你所使用的gpg软件是2.0以前的版本,&lt;code&gt;--rfc2440&lt;/code&gt; 标志可能不会被识别，可以尝试用&lt;code&gt;--openpgp&lt;/code&gt;替代.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假设需要加密的文件名为&lt;code&gt;input.key&lt;/code&gt;，加密命令如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;假如你所使用的gpg软件是2.0以前的版本,&lt;code&gt;--rfc2440&lt;/code&gt; 标志可能不会被识别，可以尝试用&lt;code&gt;--openpgp&lt;/code&gt;替代.&lt;/p&gt;
 &lt;p&gt;命令执行后将会生成&lt;code&gt;input.key.asc&lt;/code&gt;文件，可以通过&lt;code&gt;*INCLUDE&lt;/code&gt;关键字导入主文件。&lt;/p&gt;</description>
     </item>
     
