@@ -13,10 +13,10 @@
     
     <item>
       <title>建立虚假Emby验证服务器获得高级会员</title>
-      <link>http://x64.life/2020/05/12/%E5%BB%BA%E7%AB%8B%E8%99%9A%E5%81%87emby%E9%AA%8C%E8%AF%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8E%B7%E5%BE%97%E9%AB%98%E7%BA%A7%E4%BC%9A%E5%91%98/</link>
+      <link>http://x64.life/emby-fake-auth/</link>
       <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
       
-      <guid>http://x64.life/2020/05/12/%E5%BB%BA%E7%AB%8B%E8%99%9A%E5%81%87emby%E9%AA%8C%E8%AF%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8E%B7%E5%BE%97%E9%AB%98%E7%BA%A7%E4%BC%9A%E5%91%98/</guid>
+      <guid>http://x64.life/emby-fake-auth/</guid>
       <description>&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
 &lt;p&gt;Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。&lt;/p&gt;
 &lt;p&gt;因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。&lt;/p&gt;

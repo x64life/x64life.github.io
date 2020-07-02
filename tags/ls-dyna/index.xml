@@ -13,10 +13,10 @@
     
     <item>
       <title>LSDYNA K文件加密与解密技术</title>
-      <link>http://x64.life/2020/05/13/lsdyna-k%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86%E6%8A%80%E6%9C%AF/</link>
+      <link>http://x64.life/lsdyna-keyword-decrypt/</link>
       <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
       
-      <guid>http://x64.life/2020/05/13/lsdyna-k%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86%E6%8A%80%E6%9C%AF/</guid>
+      <guid>http://x64.life/lsdyna-keyword-decrypt/</guid>
       <description>&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
 &lt;p&gt;首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。&lt;/p&gt;
 &lt;p&gt;接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括&lt;code&gt;-----BEGIN&lt;/code&gt; 和 &lt;code&gt;-----END&lt;/code&gt; 之间的所有字符到文本文件并保存。导入命令为&lt;code&gt;gpg --import &amp;lt;filename&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;filename\&amp;gt;&lt;/code&gt; 是保存public key的文件名。&lt;/p&gt;

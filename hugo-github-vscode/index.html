@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>关于 &middot; X64·Life</title>
+    <title>Hugo&#43;Github Pasges建立个人博客 &middot; X64·Life</title>
     <meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="http://x64.life/about/"/>
+    <link rel="canonical" href="http://x64.life/hugo-github-vscode/"/>
     <link rel="icon" href="http://x64.life/favicon.ico">
     <link rel="apple-touch-icon" href="http://x64.life/apple-touch-icon.png"/>
     <link rel="stylesheet" href="http://x64.life/css/style.css">
@@ -20,26 +20,122 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="关于" />
-<meta property="og:description" content="对不起，我还没想好怎么写" />
+    <meta property="og:title" content="Hugo&#43;Github Pasges建立个人博客" />
+<meta property="og:description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+删除public文件夹
+
+rm -rf public
+
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://x64.life/about/" />
-<meta property="article:published_time" content="2020-05-04T21:38:52+08:00" />
-<meta property="article:modified_time" content="2020-05-04T21:41:52+08:00" />
+<meta property="og:url" content="http://x64.life/hugo-github-vscode/" />
+<meta property="article:published_time" content="2020-05-05T22:50:18+08:00" />
+<meta property="article:modified_time" content="2020-05-05T22:50:18+08:00" />
 
     
-    <meta itemprop="name" content="关于">
-<meta itemprop="description" content="对不起，我还没想好怎么写">
-<meta itemprop="datePublished" content="2020-05-04T21:38:52&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-04T21:41:52&#43;08:00" />
-<meta itemprop="wordCount" content="1">
+    <meta itemprop="name" content="Hugo&#43;Github Pasges建立个人博客">
+<meta itemprop="description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+删除public文件夹
+
+rm -rf public
+
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+">
+<meta itemprop="datePublished" content="2020-05-05T22:50:18&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-05T22:50:18&#43;08:00" />
+<meta itemprop="wordCount" content="82">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="hugo,github,vscode," />
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="关于"/>
-<meta name="twitter:description" content="对不起，我还没想好怎么写"/>
+<meta name="twitter:title" content="Hugo&#43;Github Pasges建立个人博客"/>
+<meta name="twitter:description" content="前言
+此贴用于记录本站的建立过程。
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云&#43;All-in-one服务器）：
+
+数据存放于群晖DS215j（家庭私有云）
+Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10
+
+1. Hugo安装
+通过SSH或者Unraid里的VNC Remote登录Debian 10
+下载并安装Go语言和最新版的Hugo：
+apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+如果正确返回版本信息，说明已经安装成功
+具体hugo建站流程参见官网教程Quick Start
+2. Host on Github
+官方教程：
+
+在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；
+在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；
+
+git clone &lt;YOUR-PROJECT-URL&gt; &amp;&amp; cd &lt;YOUR-PROJECT&gt;
+
+将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;
+删除public文件夹
+
+rm -rf public
+
+建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io
+
+git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+"/>
 <meta name="twitter:site" content="@x64life"/>
 
     
@@ -255,9 +351,9 @@
         
 
         <header class="article-header">
-    <a href="http://x64.life/about/">
+    <a href="http://x64.life/hugo-github-vscode/">
     <h1 class="article-title" itemprop="name">
-        关于
+        Hugo&#43;Github Pasges建立个人博客
     </h1>
     </a>
     <div class="article-meta">
@@ -265,9 +361,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-05-04 21:38:52 &#43;0800 CST" itemprop="datePublished">2020-05-04</time>
+            <time datetime="2020-05-05 22:50:18 &#43;0800 CST" itemprop="datePublished">2020-05-05</time>
             &middot;
-            1
+            82
             字数
             &middot;
             1
@@ -275,17 +371,91 @@
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://x64.life/categories/it%E6%8A%80%E6%9C%AF">IT技术</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://x64.life/tags/hugo">hugo</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://x64.life/tags/github">github</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://x64.life/tags/vscode">vscode</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>对不起，我还没想好怎么写</p>
-
+            <h4 id="前言">前言</h4>
+<p>此贴用于记录本站的建立过程。<br>
+为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：</p>
+<ol>
+<li>数据存放于群晖DS215j（家庭私有云）</li>
+<li>Hugo和Code-server(vscode)程序运行于Unraid（All-in-one服务器）虚拟的Debian 10</li>
+</ol>
+<h4 id="1-hugo安装">1. Hugo安装</h4>
+<p>通过SSH或者Unraid里的VNC Remote登录Debian 10<br>
+下载并安装Go语言和最新版的Hugo：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install golang
+wget https://github.com/gohugoio/hugo/releases/download/v0.69.2/hugo_0.69.2_Linux-64bit.deb
+dpkg -i hugo_0.69.2_Linux-64bit.deb
+hugo version
+</code></pre></div><p>如果正确返回版本信息，说明已经安装成功</p>
+<p>具体hugo建站流程参见官网教程<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
+<h4 id="2-host-on-github">2. Host on Github</h4>
+<p>官方教程：</p>
+<ul>
+<li>在Github中创建一个代码仓库&lt;YOUR-PROJECT&gt;用于存放Hugo的相关文件；</li>
+<li>在Github中创建&lt;USERNAME&gt;.github.io代码仓库，用于存放网页文件；</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone &lt;YOUR-PROJECT-URL&gt; <span style="color:#f92672">&amp;&amp;</span> cd &lt;YOUR-PROJECT&gt;
+</code></pre></div><ul>
+<li>将Hugo站点文件复制到本地仓库 &lt;YOUR-PROJECT&gt;</li>
+<li>删除public文件夹</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf public
+</code></pre></div><ul>
+<li>建立submodule，将本地public代码仓库关联到&lt;USERNAME&gt;.github.io</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+</code></pre></div><h4 id="3-code-servervscode作为markdown编辑器">3. Code-server(vscode)作为Markdown编辑器</h4>
+<p>Code-server 的官方描述“Code-server is VS Code running on a remote server, accessible through the browser.”，它是一个运行在远端服务器上的VS Code，可以通过浏览器进行访问和操作。
+<img src="https://github.com/cdr/code-server/raw/master/doc/assets/code-server.gif" alt=""></p>
+<p>code-server在Debian 10中的安装步骤：</p>
+<ul>
+<li>从code-server的github下载最新版程序</li>
+<li>解压到任意目录,我放到/usr/local/下面</li>
+<li>建立/usr/bin/code-server 到 /usr/local/code-server/code-server的软连接</li>
+<li>启动code-server，默认IP:Port是127.0.0.1:8080，我这里通过192.168.88.150:8080无法打开code-server，启动的时候需要指定IP为0.0.0.0</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">code-server --auth none --bind-addr 0.0.0.0:8080
+</code></pre></div>
         </div>
         <footer class="article-footer">
-    <a data-url="http://x64.life/about/" data-id="6083a88ee3411b0d17ce02d738f69d47" class="article-share-link">
+    <a data-url="http://x64.life/hugo-github-vscode/" data-id="69e13d18070ed5a419ab7dd99f23a5d6" class="article-share-link">
         <i class="fa fa-share"></i>
         分享
     </a>
@@ -360,6 +530,26 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="http://x64.life/first-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">第一篇文章</div>
+    </a>
+    
+
+    
+    <a href="http://x64.life/emby-fake-auth/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">建立虚假Emby验证服务器获得高级会员</div>
+    </a>
+    
+</nav>
+
 
 </article>
 
