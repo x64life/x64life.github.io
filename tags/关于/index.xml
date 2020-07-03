@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>关于 on X64·Life</title>
-    <link>http://x64.life/tags/%E5%85%B3%E4%BA%8E/</link>
+    <link>https://x64.life/tags/%E5%85%B3%E4%BA%8E/</link>
     <description>Recent content in 关于 on X64·Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 04 May 2020 03:25:56 +0800</lastBuildDate>
     
-	<atom:link href="http://x64.life/tags/%E5%85%B3%E4%BA%8E/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://x64.life/tags/%E5%85%B3%E4%BA%8E/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第一篇文章</title>
-      <link>http://x64.life/first-post/</link>
+      <link>https://x64.life/first-post/</link>
       <pubDate>Mon, 04 May 2020 03:25:56 +0800</pubDate>
       
-      <guid>http://x64.life/first-post/</guid>
+      <guid>https://x64.life/first-post/</guid>
       <description>&lt;p&gt;第一篇文章，说到哪里是哪里吧&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;我是谁&#34;&gt;我是谁？&lt;/h2&gt;
 &lt;p&gt;网名：J哥 | 职业：汽车工程师 | 业余爱好：IT技术&lt;br&gt;

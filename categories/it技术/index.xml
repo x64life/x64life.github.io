@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IT技术 on X64·Life</title>
-    <link>http://x64.life/categories/it%E6%8A%80%E6%9C%AF/</link>
+    <link>https://x64.life/categories/it%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in IT技术 on X64·Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 12 May 2020 22:40:09 +0800</lastBuildDate>
     
-	<atom:link href="http://x64.life/categories/it%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://x64.life/categories/it%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>建立虚假Emby验证服务器获得高级会员</title>
-      <link>http://x64.life/emby-fake-auth/</link>
+      <link>https://x64.life/emby-fake-auth/</link>
       <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
       
-      <guid>http://x64.life/emby-fake-auth/</guid>
+      <guid>https://x64.life/emby-fake-auth/</guid>
       <description>&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
 &lt;p&gt;Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。&lt;/p&gt;
 &lt;p&gt;因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。&lt;/p&gt;
@@ -53,10 +53,10 @@ DNS.2=*.mb3admin.com&lt;/p&gt;
     
     <item>
       <title>Hugo&#43;Github Pasges建立个人博客</title>
-      <link>http://x64.life/hugo-github-vscode/</link>
+      <link>https://x64.life/hugo-github-vscode/</link>
       <pubDate>Tue, 05 May 2020 22:50:18 +0800</pubDate>
       
-      <guid>http://x64.life/hugo-github-vscode/</guid>
+      <guid>https://x64.life/hugo-github-vscode/</guid>
       <description>&lt;h4 id=&#34;前言&#34;&gt;前言&lt;/h4&gt;
 &lt;p&gt;此贴用于记录本站的建立过程。&lt;br&gt;
 为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：&lt;/p&gt;

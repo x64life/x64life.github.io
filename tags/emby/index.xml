@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emby on X64·Life</title>
-    <link>http://x64.life/tags/emby/</link>
+    <link>https://x64.life/tags/emby/</link>
     <description>Recent content in emby on X64·Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 12 May 2020 22:40:09 +0800</lastBuildDate>
     
-	<atom:link href="http://x64.life/tags/emby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://x64.life/tags/emby/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>建立虚假Emby验证服务器获得高级会员</title>
-      <link>http://x64.life/emby-fake-auth/</link>
+      <link>https://x64.life/emby-fake-auth/</link>
       <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
       
-      <guid>http://x64.life/emby-fake-auth/</guid>
+      <guid>https://x64.life/emby-fake-auth/</guid>
       <description>&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
 &lt;p&gt;Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。&lt;/p&gt;
 &lt;p&gt;因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。&lt;/p&gt;

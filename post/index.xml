@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on X64·Life</title>
-    <link>http://x64.life/post/</link>
+    <link>https://x64.life/post/</link>
     <description>Recent content in Posts on X64·Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 13 May 2020 21:15:15 +0800</lastBuildDate>
     
-	<atom:link href="http://x64.life/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://x64.life/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LSDYNA K文件加密与解密技术</title>
-      <link>http://x64.life/lsdyna-keyword-decrypt/</link>
+      <link>https://x64.life/lsdyna-keyword-decrypt/</link>
       <pubDate>Wed, 13 May 2020 21:15:15 +0800</pubDate>
       
-      <guid>http://x64.life/lsdyna-keyword-decrypt/</guid>
+      <guid>https://x64.life/lsdyna-keyword-decrypt/</guid>
       <description>&lt;p&gt;按照下述步骤进行LS-DYNA k文件的加密操作:&lt;/p&gt;
 &lt;p&gt;首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。&lt;/p&gt;
 &lt;p&gt;接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括&lt;code&gt;-----BEGIN&lt;/code&gt; 和 &lt;code&gt;-----END&lt;/code&gt; 之间的所有字符到文本文件并保存。导入命令为&lt;code&gt;gpg --import &amp;lt;filename&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;filename\&amp;gt;&lt;/code&gt; 是保存public key的文件名。&lt;/p&gt;
@@ -53,10 +53,10 @@ SoAeXMxSC7F44Ood
     
     <item>
       <title>建立虚假Emby验证服务器获得高级会员</title>
-      <link>http://x64.life/emby-fake-auth/</link>
+      <link>https://x64.life/emby-fake-auth/</link>
       <pubDate>Tue, 12 May 2020 22:40:09 +0800</pubDate>
       
-      <guid>http://x64.life/emby-fake-auth/</guid>
+      <guid>https://x64.life/emby-fake-auth/</guid>
       <description>&lt;p&gt;声明：本文仅供学习研究,切勿用于非法用途&lt;/p&gt;
 &lt;p&gt;Emby通过服务器mb3admin.com验证客户端是否具有高级会员授权，一旦验证通过后，会在客户端内保留一段时间的缓存信息。&lt;/p&gt;
 &lt;p&gt;因此可以通过修改host劫持域名mb3admin.com，使客户端连接到虚假服务器，获得虚假授权。由于缓存机制的存在，即使短时间离开劫持环境，仍然可以继续使用高级会员功能。&lt;/p&gt;
@@ -93,10 +93,10 @@ DNS.2=*.mb3admin.com&lt;/p&gt;
     
     <item>
       <title>Hugo&#43;Github Pasges建立个人博客</title>
-      <link>http://x64.life/hugo-github-vscode/</link>
+      <link>https://x64.life/hugo-github-vscode/</link>
       <pubDate>Tue, 05 May 2020 22:50:18 +0800</pubDate>
       
-      <guid>http://x64.life/hugo-github-vscode/</guid>
+      <guid>https://x64.life/hugo-github-vscode/</guid>
       <description>&lt;h4 id=&#34;前言&#34;&gt;前言&lt;/h4&gt;
 &lt;p&gt;此贴用于记录本站的建立过程。&lt;br&gt;
 为了便于数据的集中化管理，所有的数据和程序尽量部署在云端（家庭私有云+All-in-one服务器）：&lt;/p&gt;
@@ -134,10 +134,10 @@ hugo version
     
     <item>
       <title>第一篇文章</title>
-      <link>http://x64.life/first-post/</link>
+      <link>https://x64.life/first-post/</link>
       <pubDate>Mon, 04 May 2020 03:25:56 +0800</pubDate>
       
-      <guid>http://x64.life/first-post/</guid>
+      <guid>https://x64.life/first-post/</guid>
       <description>&lt;p&gt;第一篇文章，说到哪里是哪里吧&amp;hellip;&lt;/p&gt;
 &lt;h2 id=&#34;我是谁&#34;&gt;我是谁？&lt;/h2&gt;
 &lt;p&gt;网名：J哥 | 职业：汽车工程师 | 业余爱好：IT技术&lt;br&gt;
