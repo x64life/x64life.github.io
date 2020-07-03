@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="J哥">
     
-      <meta name="description" content="LS-DYNA k文件加密与解密">
+      <meta name="description" content="">
     
     
     <link rel="canonical" href="https://x64.life/lsdyna-keyword-decrypt/"/>
@@ -21,7 +21,38 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="LSDYNA K文件加密与解密技术" />
-<meta property="og:description" content="LS-DYNA k文件加密与解密" />
+<meta property="og:description" content="按照下述步骤进行LS-DYNA k文件的加密操作:
+首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。
+接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括-----BEGIN 和 -----END 之间的所有字符到文本文件并保存。导入命令为gpg --import &lt;filename&gt;, &lt;filename\&gt; 是保存public key的文件名。
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+mQGiBFM61ScRBACgqz7q7kytYuuRpa&#43;1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
+CC6HRL2fMVRtBQZuy445eqsot5npcnzpQ6rcvsQZTVCqXH/gx5O5xs6/W8ktaJXn
+hBrxGabk6IzlOXYvmQ2&#43;jOATfQs29pt4&#43;e/&#43;oXFI9EfKBHao2dEgtOWS6wCg&#43;9gi
+9azFZOUIHV0EJDPFQJZrRFUD/11AG23e7964MN0HTWAWCIvPs8johwB7NOF6UjRR
+xuqD/ZqiQ1hhmQzJR89Weg0TeFFCVP&#43;yK2tgPOgsXry/r7WF/RnO9S/7yvtTWHr8
+QPVxCur7vcKX/Lis6ByiyyDvihavBB6RgMYl5HkrEstTY/j3O09woxtQ4Pae5yZ2
+woj0BACI87Lk6aO/9wAVXBDYyufqX9bea/lbMEuQZ7qzBO7xjSwchYeoLUbCK5sh
+iGI&#43;nT3&#43;liqUZW8&#43;KXd/6I&#43;xsN&#43;YXuS9olmeN5L391VF7ZnWcsOKLbr3tnA3TKJb
+Q/txpFhI/2CM2u0VU6w6DAAGlxic5Gf1Cdc8/mA5KaNEuq24PrRDTGl2ZXJtb3Jl
+IFNvZnR3YXJlIFRlY2hub2xvZ3kgQ29ycG9yYXRpb24gKExTVEMpIDxzdXBwb3J0
+QGxzdGMuY29tPohVBBMRAgAVAhsDAh4BAheABQJTOtVDAgsHAhYAAAoJECATgx5l
+rsCu0P4An2f9h8YuWfW&#43;mNY1gm29nIs&#43;kbeZAJ44HMvNgfOVtqUxUCyTlCLjwR6O
+CbkBDQRTOtUnEAQA4Q4D0F6l77N0e6XCIH49b7MHFyjkq3OdgHE4vylubEAXVeeX
+FD4Vrojn3t/I1QqAUG4ipZZAlLVrSYruzQLYaLhjYP124Py/b6vRo0FcyVsLbazj
+BxnGs&#43;fFTrYspLaWfBK2dIrQ9ze9QSLhNous36W3em&#43;fhx8hzGgcUUZRQOcAAwUD
+/RkrdN&#43;Mbim6H6MNnEKhoXlpogzriCUB&#43;hpxfQSP&#43;go6&#43;Np2RGkQfTEu&#43;W51vrFA
+cW36cncp3OLpsvKzaQgTTT1rqb11Hoe/YpH3T9ngz4NX7a4OSDhHDKC1Q1BuzTEJ
+3A3RXeAgRaMV8&#43;hFm91g2KWZuMeqd&#43;nSo2sb5EvpFhW9iEkEGBECAAkFAlM61ScC
+GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh&#43;1sSqkGCxzHEGER8AniHYve/Kn6CL
+SoAeXMxSC7F44Ood
+=R0pG
+-----END PGP PUBLIC KEY BLOCK-----
+假设需要加密的文件名为input.key，加密命令如下:
+gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+假如你所使用的gpg软件是2.0以前的版本,--rfc2440 标志可能不会被识别，可以尝试用--openpgp替代.
+命令执行后将会生成input.key.asc文件，可以通过*INCLUDE关键字导入主文件。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://x64.life/lsdyna-keyword-decrypt/" />
 <meta property="article:published_time" content="2020-05-13T21:15:15+08:00" />
@@ -29,7 +60,38 @@
 
     
     <meta itemprop="name" content="LSDYNA K文件加密与解密技术">
-<meta itemprop="description" content="LS-DYNA k文件加密与解密">
+<meta itemprop="description" content="按照下述步骤进行LS-DYNA k文件的加密操作:
+首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。
+接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括-----BEGIN 和 -----END 之间的所有字符到文本文件并保存。导入命令为gpg --import &lt;filename&gt;, &lt;filename\&gt; 是保存public key的文件名。
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+mQGiBFM61ScRBACgqz7q7kytYuuRpa&#43;1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
+CC6HRL2fMVRtBQZuy445eqsot5npcnzpQ6rcvsQZTVCqXH/gx5O5xs6/W8ktaJXn
+hBrxGabk6IzlOXYvmQ2&#43;jOATfQs29pt4&#43;e/&#43;oXFI9EfKBHao2dEgtOWS6wCg&#43;9gi
+9azFZOUIHV0EJDPFQJZrRFUD/11AG23e7964MN0HTWAWCIvPs8johwB7NOF6UjRR
+xuqD/ZqiQ1hhmQzJR89Weg0TeFFCVP&#43;yK2tgPOgsXry/r7WF/RnO9S/7yvtTWHr8
+QPVxCur7vcKX/Lis6ByiyyDvihavBB6RgMYl5HkrEstTY/j3O09woxtQ4Pae5yZ2
+woj0BACI87Lk6aO/9wAVXBDYyufqX9bea/lbMEuQZ7qzBO7xjSwchYeoLUbCK5sh
+iGI&#43;nT3&#43;liqUZW8&#43;KXd/6I&#43;xsN&#43;YXuS9olmeN5L391VF7ZnWcsOKLbr3tnA3TKJb
+Q/txpFhI/2CM2u0VU6w6DAAGlxic5Gf1Cdc8/mA5KaNEuq24PrRDTGl2ZXJtb3Jl
+IFNvZnR3YXJlIFRlY2hub2xvZ3kgQ29ycG9yYXRpb24gKExTVEMpIDxzdXBwb3J0
+QGxzdGMuY29tPohVBBMRAgAVAhsDAh4BAheABQJTOtVDAgsHAhYAAAoJECATgx5l
+rsCu0P4An2f9h8YuWfW&#43;mNY1gm29nIs&#43;kbeZAJ44HMvNgfOVtqUxUCyTlCLjwR6O
+CbkBDQRTOtUnEAQA4Q4D0F6l77N0e6XCIH49b7MHFyjkq3OdgHE4vylubEAXVeeX
+FD4Vrojn3t/I1QqAUG4ipZZAlLVrSYruzQLYaLhjYP124Py/b6vRo0FcyVsLbazj
+BxnGs&#43;fFTrYspLaWfBK2dIrQ9ze9QSLhNous36W3em&#43;fhx8hzGgcUUZRQOcAAwUD
+/RkrdN&#43;Mbim6H6MNnEKhoXlpogzriCUB&#43;hpxfQSP&#43;go6&#43;Np2RGkQfTEu&#43;W51vrFA
+cW36cncp3OLpsvKzaQgTTT1rqb11Hoe/YpH3T9ngz4NX7a4OSDhHDKC1Q1BuzTEJ
+3A3RXeAgRaMV8&#43;hFm91g2KWZuMeqd&#43;nSo2sb5EvpFhW9iEkEGBECAAkFAlM61ScC
+GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh&#43;1sSqkGCxzHEGER8AniHYve/Kn6CL
+SoAeXMxSC7F44Ood
+=R0pG
+-----END PGP PUBLIC KEY BLOCK-----
+假设需要加密的文件名为input.key，加密命令如下:
+gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+假如你所使用的gpg软件是2.0以前的版本,--rfc2440 标志可能不会被识别，可以尝试用--openpgp替代.
+命令执行后将会生成input.key.asc文件，可以通过*INCLUDE关键字导入主文件。">
 <meta itemprop="datePublished" content="2020-05-13T21:15:15&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-13T21:15:15&#43;08:00" />
 <meta itemprop="wordCount" content="158">
@@ -39,7 +101,38 @@
 <meta itemprop="keywords" content="ls-dyna,," />
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="LSDYNA K文件加密与解密技术"/>
-<meta name="twitter:description" content="LS-DYNA k文件加密与解密"/>
+<meta name="twitter:description" content="按照下述步骤进行LS-DYNA k文件的加密操作:
+首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。
+接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括-----BEGIN 和 -----END 之间的所有字符到文本文件并保存。导入命令为gpg --import &lt;filename&gt;, &lt;filename\&gt; 是保存public key的文件名。
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+mQGiBFM61ScRBACgqz7q7kytYuuRpa&#43;1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
+CC6HRL2fMVRtBQZuy445eqsot5npcnzpQ6rcvsQZTVCqXH/gx5O5xs6/W8ktaJXn
+hBrxGabk6IzlOXYvmQ2&#43;jOATfQs29pt4&#43;e/&#43;oXFI9EfKBHao2dEgtOWS6wCg&#43;9gi
+9azFZOUIHV0EJDPFQJZrRFUD/11AG23e7964MN0HTWAWCIvPs8johwB7NOF6UjRR
+xuqD/ZqiQ1hhmQzJR89Weg0TeFFCVP&#43;yK2tgPOgsXry/r7WF/RnO9S/7yvtTWHr8
+QPVxCur7vcKX/Lis6ByiyyDvihavBB6RgMYl5HkrEstTY/j3O09woxtQ4Pae5yZ2
+woj0BACI87Lk6aO/9wAVXBDYyufqX9bea/lbMEuQZ7qzBO7xjSwchYeoLUbCK5sh
+iGI&#43;nT3&#43;liqUZW8&#43;KXd/6I&#43;xsN&#43;YXuS9olmeN5L391VF7ZnWcsOKLbr3tnA3TKJb
+Q/txpFhI/2CM2u0VU6w6DAAGlxic5Gf1Cdc8/mA5KaNEuq24PrRDTGl2ZXJtb3Jl
+IFNvZnR3YXJlIFRlY2hub2xvZ3kgQ29ycG9yYXRpb24gKExTVEMpIDxzdXBwb3J0
+QGxzdGMuY29tPohVBBMRAgAVAhsDAh4BAheABQJTOtVDAgsHAhYAAAoJECATgx5l
+rsCu0P4An2f9h8YuWfW&#43;mNY1gm29nIs&#43;kbeZAJ44HMvNgfOVtqUxUCyTlCLjwR6O
+CbkBDQRTOtUnEAQA4Q4D0F6l77N0e6XCIH49b7MHFyjkq3OdgHE4vylubEAXVeeX
+FD4Vrojn3t/I1QqAUG4ipZZAlLVrSYruzQLYaLhjYP124Py/b6vRo0FcyVsLbazj
+BxnGs&#43;fFTrYspLaWfBK2dIrQ9ze9QSLhNous36W3em&#43;fhx8hzGgcUUZRQOcAAwUD
+/RkrdN&#43;Mbim6H6MNnEKhoXlpogzriCUB&#43;hpxfQSP&#43;go6&#43;Np2RGkQfTEu&#43;W51vrFA
+cW36cncp3OLpsvKzaQgTTT1rqb11Hoe/YpH3T9ngz4NX7a4OSDhHDKC1Q1BuzTEJ
+3A3RXeAgRaMV8&#43;hFm91g2KWZuMeqd&#43;nSo2sb5EvpFhW9iEkEGBECAAkFAlM61ScC
+GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh&#43;1sSqkGCxzHEGER8AniHYve/Kn6CL
+SoAeXMxSC7F44Ood
+=R0pG
+-----END PGP PUBLIC KEY BLOCK-----
+假设需要加密的文件名为input.key，加密命令如下:
+gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+假如你所使用的gpg软件是2.0以前的版本,--rfc2440 标志可能不会被识别，可以尝试用--openpgp替代.
+命令执行后将会生成input.key.asc文件，可以通过*INCLUDE关键字导入主文件。"/>
 <meta name="twitter:site" content="@x64life"/>
 
     

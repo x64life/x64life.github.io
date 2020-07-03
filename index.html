@@ -302,7 +302,38 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                LS-DYNA k文件加密与解密
+                <p>按照下述步骤进行LS-DYNA k文件的加密操作:</p>
+<p>首先, 你需要安装免费的GPG加密软件. 假如你使用的是Linux系统，大概率已经预装了.  如果不是，可以访问www.gnupg.org获取。</p>
+<p>接着, 你需要将下面的LSTC public key导入GPG加密软件。复制包括<code>-----BEGIN</code> 和 <code>-----END</code> 之间的所有字符到文本文件并保存。导入命令为<code>gpg --import &lt;filename&gt;</code>, <code>&lt;filename\&gt;</code> 是保存public key的文件名。</p>
+<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.19 (GNU/Linux)
+
+mQGiBFM61ScRBACgqz7q7kytYuuRpa+1DTD9J3Kn8s3kMHO7zPtLu8bsb1L1I4UQ
+CC6HRL2fMVRtBQZuy445eqsot5npcnzpQ6rcvsQZTVCqXH/gx5O5xs6/W8ktaJXn
+hBrxGabk6IzlOXYvmQ2+jOATfQs29pt4+e/+oXFI9EfKBHao2dEgtOWS6wCg+9gi
+9azFZOUIHV0EJDPFQJZrRFUD/11AG23e7964MN0HTWAWCIvPs8johwB7NOF6UjRR
+xuqD/ZqiQ1hhmQzJR89Weg0TeFFCVP+yK2tgPOgsXry/r7WF/RnO9S/7yvtTWHr8
+QPVxCur7vcKX/Lis6ByiyyDvihavBB6RgMYl5HkrEstTY/j3O09woxtQ4Pae5yZ2
+woj0BACI87Lk6aO/9wAVXBDYyufqX9bea/lbMEuQZ7qzBO7xjSwchYeoLUbCK5sh
+iGI+nT3+liqUZW8+KXd/6I+xsN+YXuS9olmeN5L391VF7ZnWcsOKLbr3tnA3TKJb
+Q/txpFhI/2CM2u0VU6w6DAAGlxic5Gf1Cdc8/mA5KaNEuq24PrRDTGl2ZXJtb3Jl
+IFNvZnR3YXJlIFRlY2hub2xvZ3kgQ29ycG9yYXRpb24gKExTVEMpIDxzdXBwb3J0
+QGxzdGMuY29tPohVBBMRAgAVAhsDAh4BAheABQJTOtVDAgsHAhYAAAoJECATgx5l
+rsCu0P4An2f9h8YuWfW+mNY1gm29nIs+kbeZAJ44HMvNgfOVtqUxUCyTlCLjwR6O
+CbkBDQRTOtUnEAQA4Q4D0F6l77N0e6XCIH49b7MHFyjkq3OdgHE4vylubEAXVeeX
+FD4Vrojn3t/I1QqAUG4ipZZAlLVrSYruzQLYaLhjYP124Py/b6vRo0FcyVsLbazj
+BxnGs+fFTrYspLaWfBK2dIrQ9ze9QSLhNous36W3em+fhx8hzGgcUUZRQOcAAwUD
+/RkrdN+Mbim6H6MNnEKhoXlpogzriCUB+hpxfQSP+go6+Np2RGkQfTEu+W51vrFA
+cW36cncp3OLpsvKzaQgTTT1rqb11Hoe/YpH3T9ngz4NX7a4OSDhHDKC1Q1BuzTEJ
+3A3RXeAgRaMV8+hFm91g2KWZuMeqd+nSo2sb5EvpFhW9iEkEGBECAAkFAlM61ScC
+GwwACgkQIBODHmWuwK7BaQCfUovuhS6oXuh+1sSqkGCxzHEGER8AniHYve/Kn6CL
+SoAeXMxSC7F44Ood
+=R0pG
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre><p>假设需要加密的文件名为<code>input.key</code>，加密命令如下:</p>
+<pre><code>gpg -e -a --rfc2440 --textmode --cipher-algo AES --compress-algo 0 -r 0x65AEC0AE input.key
+</code></pre><p>假如你所使用的gpg软件是2.0以前的版本,<code>--rfc2440</code> 标志可能不会被识别，可以尝试用<code>--openpgp</code>替代.</p>
+<p>命令执行后将会生成<code>input.key.asc</code>文件，可以通过<code>*INCLUDE</code>关键字导入主文件。</p>
             </p>
             <p class="article-more-link">
                 <a href="https://x64.life/lsdyna-keyword-decrypt/">
